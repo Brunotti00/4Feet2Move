@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles-website/header.css" />
+    <link rel="stylesheet" href="styles-website/home.css" />
+    <link rel="stylesheet" href="styles-website/over-mij.css" />
+    <link rel="stylesheet" href="styles-website/general.css" />
+    <link rel="stylesheet" href="styles-website/contact.css" />
+    <link rel="stylesheet" href="styles-website/footer.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>4feet2move</title>
+  </head>
+
+  <body>
+    <header class="header-flex">
+      <img
+        src="website-images/4F2M_logo 6hoek Wit op transparant.png"
+        alt="4Feet2Move Logo"
+        class="logo"
+      />
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+      </label>
+      <nav class="navbar">
+        <a href="index.html" style="--i: 0">Home</a>
+        <a href="over-mij.html" style="--i: 1">Over Mij</a>
+        <a href="aanbod.html" style="--i: 2">Aanbod</a>
+        <a href="contact.html" style="--i: 3">Contact</a>
+      </nav>
+    </header>
+
+    <div class="opening-section contact">
+      <div class="text-container-header">
+        <h1>Contact</h1>
+      </div>
+    </div>
+
+    <div class="background">
+      <div class="cont-svg mobile-only">
+        <img
+          src="website-images/top-container-divider-rood.svg"
+          alt="section border"
+        />
+      </div>
+      <div class="cont-svg desktop-only">
+        <img
+          src="website-images/top-container-divider-rood-tablet.svg"
+          alt="section border"
+        />
+      </div>
+
+      <div class="container">
+        <div class="over-mij-text">
+          <h1>Contact</h1>
+          <hr class="block-separator" />
+          <p>
+            Neem geheel vrijblijvend contact met ons op en ontdek hoe 4Feet2Move
+            jou en je paard kan begeleiden naar een diepere harmonie en
+            effectieve communicatie. We kijken ernaar uit om van je te horen en
+            te ontdekken hoe we samen jouw doelen kunnen realiseren.
+          </p>
+        </div>
+
+        <div class="grid-contact">
+          <form
+            action="https://formsubmit.co/ab9910375fd0548c9ab83da17e540ea9"
+            method="post"
+            success="index.html"
+          >
+            <input type="hidden" name="_subject" value="Contact 4feet2move" />
+            <input type="hidden" name="_autoresponse" value="Dank je wel voor het benaderen van 4Feet2Move. &#10;&#10;Ik heb je bericht ontvangen en zal er zo snel mogelijk op reageren.&#10;&#10;Let op: Momenteel ben ik met vakantie en heb ik geen toegang tot mijn e-mail. &#10;Ik zal mijn best doen om eind januari weer bij je terug te komen. Bedankt voor je begrip!&#10;&#10;Met vriendelijke groet,&#10;&#10;Tyra van Beek&#10;4Feet2Move">
+            <h2>Contact Formulier</h2>
+            <div class="form-wrapper">
+              <div class="form-row">
+                <label for="naam">Naam*:</label>
+                <input
+                  type="text"
+                  id="naam"
+                  name="naam"
+                  placeholder="Naam"
+                  required
+                />
+              </div>
+
+              <div class="form-container">
+                <div class="form-row">
+                  <label for="email">Emailadres*:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="E-mail"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="telefoon">Telefoonnummer:</label>
+                  <input
+                    type="tel"
+                    id="telefoon"
+                    name="telefoon"
+                    placeholder="Telefoonnummer"
+                  />
+                </div>
+              </div>
+
+              <div class="form-vertical-container">
+                <div class="form-container">
+                  <div class="form-row">
+                    <label for="ras">Ras:</label>
+                    <input type="ras" id="ras" name="ras" placeholder="Ras" />
+                  </div>
+                  <div class="form-row">
+                    <label for="leeftijd">Leeftijd:</label>
+                    <input
+                      type="leeftijd"
+                      id="leeftijd"
+                      name="leeftijd"
+                      placeholder="Leeftijd"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <select id="opties" name="opties">
+                    <option disabled selected value>
+                      -- Kies een optie --
+                    </option>
+                    <option value="Merrie">Merrie</option>
+                    <option value="Hengst">Hengst</option>
+                    <option value="Ruin">Ruin</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="onderwerp">Onderwerp*:</label>
+                <select id="onderwerp" name="onderwerp" required>
+                  <option disabled selected value>-- Kies een optie --</option>
+                  <option value="Vraag">Vraag</option>
+                  <option value="Proefles25">Proefles €25</option>
+                  <option value="Training35">Losse training €35</option>
+                  <option value="5Training150">5-Lessen pakket €150</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="bericht">Bericht*:</label>
+                <textarea
+                  id="bericht"
+                  name="bericht"
+                  placeholder="Schrijf een bericht..."
+                  rows="8"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-row middle">
+                <input
+                  name="_formsubmit_id"
+                  type="text"
+                  style="display: none"
+                />
+                <button class="contact-button" type="submit" value="Verstuur">
+                  Verstuur
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="wrapper-gegevens">
+            <h2>Gegevens</h2>
+            <strong>Postadres</strong>
+            <div class="gegevens-row">
+              <i class="fa fa-envelope" aria-hidden="true"></i> Prinses
+              Marijkestraat 3A
+            </div>
+            <div class="gegevens-row">
+              <i class="fa fa-map-marker"></i> 1931 CH Egmond aan zee
+            </div>
+            <br />
+            <strong>Bedrijfsgegevens</strong>
+            <div class="gegevens-row">
+              <i class="fa fa-building"></i> 4Feet2Move
+            </div>
+            <div class="gegevens-row">
+              <i class="fa fa-at"></i> 4feet2move@gmail.com
+            </div>
+            <div class="gegevens-row">
+              <i class="fa fa-phone"></i> +31 6 48 48 11 06
+            </div>
+            <div class="gegevens-row">
+              <i class="fa fa-certificate"></i> BTW nummer: NL004782448B45
+            </div>
+            <div class="gegevens-row">
+              <i class="fa fa-suitcase"></i> KvK nummer: 90002903
+            </div>
+          </div>
+
+          <div class="route">
+            <h2>Route</h2>
+            <div class="route-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2422.0423262705863!2d4.620098275453514!3d52.6230792285943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cf58982cb40583%3A0xae204980d81e74f2!2sPr.%20Marijkestraat%203A%2C%201931%20CH%20Egmond%20aan%20Zee!5e0!3m2!1snl!2snl!4v1702243244863!5m2!1snl!2snl"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cont-svg mobile-only flip">
+        <img
+          src="website-images/top-container-divider-rood.svg"
+          alt="section border"
+        />
+      </div>
+      <div class="cont-svg desktop-only flip">
+        <img
+          src="website-images/top-container-divider-rood-tablet.svg"
+          alt="section border"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+  <footer>
+    <div class="rij">
+      <img
+        src="website-images/4F2M_logo 6hoek Bordeaux rood.png"
+        alt="Logo-footer"
+      />
+    </div>
+    <div class="rij tabbladen">
+      <a href="index.html">Home</a>
+      <a href="over-mij.html">Over Mij</a>
+      <a href="aanbod.html">Aanbod</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="rij">
+      <a
+        href="https://www.instagram.com/4feet2move/?igshid=NzZlODBkYWE4Ng%3D%3D"
+        target="_blank"
+      >
+        <div class="sociaal-icoon instagram"></div>
+      </a>
+      <a
+        href="https://www.facebook.com/people/4Feet2Move/100089917523354/"
+        target="_blank"
+      >
+        <div class="sociaal-icoon facebook"></div>
+      </a>
+    </div>
+    <div class="rij">Copyright © 2023 All rights reserved</div>
+  </footer>
+</html>

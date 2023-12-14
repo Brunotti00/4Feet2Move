@@ -1,0 +1,161 @@
+.form-row {
+  flex: 1;
+}
+
+.form-row label {
+  display: block;
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(127, 23, 16);
+  border-radius: 4px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.form-vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  border: 1px solid rgb(127, 23, 16) !important;
+  box-shadow: 0 0 3px rgb(127, 23, 16) !important;
+  -moz-box-shadow: 0 0 3px rgb(127, 23, 16) !important;
+  -webkit-box-shadow: 0 0 3px rgb(127, 23, 16) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-offset: 0px !important;
+  outline: none !important;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+}
+
+.route {
+  width: 100%;
+  aspect-ratio: 1/1;
+  padding: 0 2rem;
+}
+.route-map {
+  align-self: stretch;
+  border: 3px solid rgb(127, 23, 16);
+  border-radius: 3px;
+}
+
+.gegevens-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+}
+
+.gegevens-row i {
+  margin-right: 10px;
+  align-items: center;
+}
+
+.wrapper-gegevens {
+  text-align: left;
+  padding: 0 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+form h2,
+.route h2,
+.wrapper-gegevens h2 {
+  width: auto;
+  text-align: center;
+}
+
+.gegevens-route {
+  display: flex;
+  gap: 15vmin;
+}
+
+@media (min-width: 1024px) {
+  .grid-contact {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 2vh;
+    column-gap: 3vw;
+  }
+
+  form {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023.5px) {
+  .grid-contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+    column-gap: 5vw;
+  }
+
+  form {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .grid-contact {
+    display: grid;
+    row-gap: 5vh;
+    width: 100%;
+  }
+
+  form {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+.middle {
+  margin: auto;
+}
+
+.grid-contact h2 {
+  margin-bottom: .5vh;
+}

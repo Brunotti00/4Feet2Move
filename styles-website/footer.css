@@ -1,0 +1,65 @@
+footer {
+  text-align: center;
+  background-color: #021017;
+  color: #fff;
+  padding: 16px;
+}
+
+.rij {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.rij img {
+  max-width: 10em;
+}
+
+.sociaal-icoon {
+  width: min(4em, 10vw);
+  height: min(4em, 10vw);
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 12px;
+  transition: background-color 0.3s;
+}
+
+.instagram {
+  background-image: url("../website-images/instagram_photo_share_icon.svg");
+  background-size: cover;
+}
+
+.facebook {
+  background-image: url("../website-images/facebook_icon.svg");
+  background-size: cover;
+}
+
+.sociaal-icoon:hover {
+  transition: background-color 0.3s;
+  background-color: rgb(127, 23, 16);
+}
+
+.tabbladen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabbladen a {
+  color: #fff;
+  text-decoration: none;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.tabbladen a:hover {
+  transition: color 0.3s;
+  color: rgb(127, 23, 16);
+}
+
+@media (max-width: 600px) {
+  .tabbladen {
+    flex-direction: column;
+  }
+}

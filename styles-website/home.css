@@ -1,0 +1,407 @@
+.container {
+  padding: 5vw 10vw;
+  width: min(100%, 2000px);
+  display: flex;
+  gap: 2vmax;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.background {
+  background-image: url(../website-images/circles\ background-tablet.svg);
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.home-text h1,
+.over-mij-text h1 {
+  color: #021017;
+  text-align: center;
+  width: auto;
+  margin: 0;
+}
+
+.home-text .contact-button {
+  margin-top: 1em;
+}
+
+.img-home {
+  max-width: min(65%, 200px);
+  object-fit: cover;
+  aspect-ratio: 1/1.2;
+  border-radius: 66% 34% 49% 51% / 54% 22% 78% 46%;
+  object-position: top;
+}
+
+.welcome {
+  border-radius: 57% 43% 56% 44% / 48% 37% 63% 52%;
+}
+
+.img-overlay-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 63%;
+  overflow: hidden;
+}
+
+.img-overlay-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.img-overlay-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(127, 23, 16, 0.6);
+  z-index: 2;
+}
+
+.testimonials-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(../website-images/image5.jpeg) center no-repeat;
+  background-size: cover;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.tooltip {
+  display: inline-block;
+}
+
+.div-verbergen {
+  display: none;
+}
+
+.testimonials-header {
+  text-align: center;
+}
+
+.testimonials-header h3 {
+  color: #ccc;
+}
+
+.testimonials-header h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 16px;
+  width: auto;
+  font-size: clamp(24px, 5vw + 0.75rem, 42px);
+}
+
+.testimonials-header i {
+  font-size: clamp(1.2rem, 3vw + 0.5rem, 2rem);
+  color: rgb(255, 220, 62);
+  margin: 0 max(0.5rem, 1vw);
+}
+
+.testimonials, .aanbiedingen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  height: 100%;
+  width: 300%;
+  display: flex;
+  transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+  align-items: center;
+}
+
+.mission-section {
+  position: relative;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../website-images/website-afbeelding2.jpeg");
+  background-size: cover;
+  background-position: top right 65%;
+  width: 100%;
+  height: 60vh;
+  color: white;
+  background-attachment: fixed;
+  line-height: 1.2em;
+}
+
+.mission-section h1,
+.mission-section h2 {
+  margin-bottom: 0;
+}
+
+.text-container-header h2,
+.mission-section h2 {
+  color: white;
+  width: clamp(200px, 70%, 800px);
+  margin-bottom: 0;
+}
+
+.tyra-quote-section {
+  position: relative;
+  background-image: url("../website-images/website-afbeelding2.jpeg");
+  background-size: cover;
+  background-position: top right 65%;
+  width: 100%;
+  height: 60vh;
+  color: white;
+}
+
+.tyra-quote-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.9) 70%
+  );
+}
+
+.persoon-img {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.persoon-img img {
+  max-width: min(50%, 280px);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  position: relative;
+  width: 33.33%;
+  padding: 2rem;
+  margin: 3rem 2rem;
+  border-radius: 2rem;
+  border: 0.5rem solid rgb(127, 23, 16);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card h3 {
+  padding: 0 2rem;
+  line-height: 1.1;
+}
+
+.card p {
+  margin: 1rem 0;
+}
+
+.card .client {
+  color: rgb(127, 23, 16);
+}
+
+.content {
+  position: relative;
+  height: min(200px, 30vh);
+  overflow: hidden;
+}
+
+.content.has-more-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(transparent, white);
+}
+
+.card.active .content {
+  height: auto;
+}
+
+.card.active .content::before {
+  display: none;
+}
+
+.more {
+  background-color: rgb(127, 23, 16);
+  margin-top: 1.5rem;
+  display: inline-block;
+  color: white;
+  padding: 0.75em 1.5em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 2em;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 2px;
+}
+
+.more:hover {
+  transform: scale(1.1);
+}
+
+.more:active {
+  background-color: rgb(107, 13, 6);
+  transform: scale(0.9);
+}
+
+.more::before {
+  content: "Lees meer";
+}
+
+.card.active .more::before {
+  content: "Lees minder";
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(127, 23, 16);
+  font-size: clamp(16px, 2vw + 0.5rem, 24px);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn.prev {
+  left: 2em;
+}
+
+.btn.next {
+  right: 2em;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.dots {
+  flex: 1;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.dots span {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.dots span.active {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+}
+
+.card i {
+  font-size: 10vmin;
+  color: rgb(127, 23, 16);
+  position: absolute;
+  padding: 0.5rem;
+}
+
+.card i:nth-child(1) {
+  top: calc(0% - 1.5rem);
+  left: 10%;
+}
+
+.card i:nth-child(2) {
+  bottom: calc(0% - 1.5rem);
+  right: 10%;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .background {
+    background-image: url(../website-images/background-good.svg);
+  }
+}
+
+.cont-svg {
+  max-width: auto;
+  height: auto;
+  overflow: auto;
+}
+
+@media (min-width: 1024.05px) {
+  .home-text h1,
+  .over-mij-text h1 {
+    text-align: start;
+    margin-left: 2rem;
+  }
+
+  .img-home {
+    float: right;
+    margin: 5px;
+    max-width: min(30%, 300px);
+  }
+
+  .tyra-quote-section {
+    height: 100vh;
+  }
+
+  .card {
+    margin: 3rem 15vw;
+  }
+
+  .btn.next {
+    right: calc(15vw + 2em);
+  }
+
+  .btn.prev {
+    left: calc(15vw + 2em);
+  }
+/* 
+  .container {
+    padding: 5vw 15vw;
+  } */
+}
