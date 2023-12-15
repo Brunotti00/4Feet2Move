@@ -129,7 +129,7 @@
 
 .slider {
   height: 100%;
-  width: 300%;
+  width: 400%;
   display: flex;
   transition: all 0.8s cubic-bezier(1, 0, 0, 1);
   align-items: center;
@@ -196,17 +196,18 @@
 }
 
 .persoon-img img {
-  max-width: min(50%, 280px);
+  max-width: min(50%, 200px);
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
+  object-position: top;
 }
 
 .card {
   background-color: white;
   color: black;
   position: relative;
-  width: 33.33%;
+  width: 25%;
   padding: 2rem;
   margin: 3rem 2rem;
   border-radius: 2rem;
@@ -235,6 +236,32 @@
   position: relative;
   height: min(200px, 30vh);
   overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .content {
+    position: relative;
+    height: min(250px, 30vh);
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 480px) and (orientation: portrait) {
+  .content {
+    position: relative;
+    height: min(400px, 50vh);
+    overflow: hidden;
+    padding: 0 5vw;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .content {
+    position: relative;
+    height: min(fit-content, 50vh);
+    overflow: hidden;
+    padding: 0 5vw;
+  }
 }
 
 .content.has-more-button::before {

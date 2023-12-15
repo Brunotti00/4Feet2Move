@@ -51,7 +51,7 @@ function updateImg() {
     currentImg = cardEl.length;
   }
 
-  imageContainerEl.style.transform = `translateX(${(currentImg - 1) * -33.33}%)`;
+  imageContainerEl.style.transform = `translateX(${(currentImg - 1) * -25}%)`;
   updateDot();
 
   if (!userClicked) {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.style.display = 'none';
             content.classList.remove('has-more-button');
             content.style.height = 'fit-content';
-            content.style.maxHeight = '400px';
+            content.style.maxHeight = '1000px';
             card.style.height = 'fit-content';
         }
     });
