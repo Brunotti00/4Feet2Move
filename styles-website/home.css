@@ -11,6 +11,13 @@
   margin: 0 auto;
 }
 
+.home-text h2 {
+  color: #021017;
+  margin: 0 0 1rem 0;
+  width: auto;
+  text-align: center;
+}
+
 .background {
   background-image: url(../website-images/circles\ background-tablet.svg);
   background-size: cover;
@@ -35,6 +42,10 @@
   margin-top: 1em;
 }
 
+.home-text .samenwerking-button {
+  margin-top: 1em;
+}
+
 .img-home {
   max-width: min(65%, 200px);
   object-fit: cover;
@@ -42,6 +53,23 @@
   border-radius: 66% 34% 49% 51% / 54% 22% 78% 46%;
   object-position: top;
 }
+
+.img-samenwerking-right {
+  max-width: min(65%, 200px);
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-position: right;
+}
+
+.img-samenwerking {
+  max-width: min(65%, 200px);
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-position: top;
+}
+
 
 .welcome {
   border-radius: 57% 43% 56% 44% / 48% 37% 63% 52%;
@@ -404,6 +432,18 @@
   .over-mij-text h1 {
     text-align: start;
     margin-left: 2rem;
+  }
+
+  .home-text h2 {
+    text-align: start;
+    margin-left: 2rem;
+    margin-bottom: 0.25em;
+  }
+
+  .home-text .samenwerking-button {
+    text-align: start;
+    margin-left: 2rem;
+    margin-bottom: 0.25em;
   }
 
   .img-home {

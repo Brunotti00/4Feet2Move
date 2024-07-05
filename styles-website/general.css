@@ -109,6 +109,23 @@ p {
   z-index: 2;
 }
 
+.samenwerking-button {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 1vh 3.75vw;
+  border: 0.1em solid var(--primary-color);
+  font-size: var(--font-size);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 2px;
+  z-index: 2;
+  margin: 0 0 1rem 0;
+}
+
 .span-button {
   background: var(--primary-color);
   height: 100%;
@@ -126,12 +143,14 @@ p {
   width: 100%;
 }
 
-.contact-button:hover {
+.contact-button:hover,
+.samenwerking-button:hover {
   transform: scale(1.1);
 }
 
 .contact-button:active,
-.hero-button:active {
+.hero-button:active,
+.samenwerking-button:active {
   background-color: rgb(107, 13, 6);
   transform: scale(0.9);
 }
