@@ -76,6 +76,15 @@ h2 {
   font-size: clamp(22px, 3.5vmin + 5px, 26px);
 }
 
+h2.title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: clamp(28px, 6vmin + 8px, 56px);
+  text-transform: none;
+  margin-bottom: 0.4em;
+}
+
 h3 {
   line-height: 1.2;
   font-size: clamp(20px, 3vmin + 5px, 24px);
@@ -257,10 +266,12 @@ p + p {
   place-items: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 25vh var(--gutter) 15vh;
+  /* ruimte onder de header (logo + marge), zodat tekst nooit tegen het menu botst */
+  padding: max(22vh, calc(clamp(24px, 8vmin, 80px) + clamp(75px, 25vmin, 200px) * 1.15 + 2.5rem))
+    var(--gutter) 10vh;
   color: #fff;
   text-align: center;
-  background: var(--hero-img) center / cover no-repeat;
+  background: var(--hero-img) 50% 20% / cover no-repeat;
 }
 
 /* donker vignet over de foto, zodat witte tekst leesbaar blijft */
@@ -286,17 +297,32 @@ p + p {
   background-position: 60% top;
 }
 
+/* mobiel (staand): haar gezicht (op ~49,5% van de foto) precies in het midden */
+@media (max-width: 800px) {
+  .hero--home {
+    background-position: 49.5% 0;
+  }
+}
+
 .hero--over-mij {
   --hero-img: url(images/hero-over-mij.webp);
+  background-position: 50% 35%;
 }
 
 .hero--aanbod {
   --hero-img: url(images/hero-aanbod.webp);
-  background-position: 75% top;
+  background-position: 88% 5%;
 }
 
-.hero--contact {
+.hero--contact,
+.hero--faq {
   --hero-img: url(images/hero-contact.webp);
+  background-position: 50% 0;
+}
+
+.hero--reviews {
+  --hero-img: url(images/reviews-achtergrond.webp);
+  background-position: 22% 12%;
 }
 
 .hero__inner {
@@ -308,25 +334,33 @@ p + p {
 }
 
 .hero h1,
-.band h1 {
+.band h1,
+.band .title {
   color: #fff;
 }
 
 .hero h2,
-.band h2 {
+.band h2,
+.band .title {
   color: #fff;
 }
 
 /* 4. SECTIES & ACHTERGROND ------------------------------------------------ */
 
-/* Lichte sectie met patroon, rode golf boven en (gespiegeld) onder */
+/* Lichte sectie met zwevende roze bollen, rode golf boven en (gespiegeld) onder.
+   De bollen worden door script.js in .blobs gezet (achter de inhoud). */
 .pattern {
-  background: var(--light) url(images/pattern-blobs.svg) center top / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--light);
 }
 
 .pattern::before,
 .pattern::after {
   content: "";
+  position: relative;
+  z-index: 2;
   display: block;
   height: clamp(80px, 11vw, 160px);
   background: url(images/wave.svg) center / 100% 100% no-repeat;
@@ -336,10 +370,24 @@ p + p {
   transform: scaleY(-1);
 }
 
-@media (min-width: 1024px) {
-  .pattern {
-    background-image: url(images/pattern-circles.svg);
-  }
+.pattern > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.blobs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* canvas met botsende luchtbellen (script.js), achter de inhoud */
+.blobs canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .wrap {
@@ -390,6 +438,7 @@ p + p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 8%; /* hoofd van Tyra blijft in beeld */
 }
 
 .banner::after {
@@ -438,6 +487,52 @@ p + p {
   border-radius: 1em;
 }
 
+.btn--light {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn--light:hover {
+  background: #fff;
+  color: var(--primary);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn--outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn--wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding-inline: 1.8em;
+}
+
+.btn--wa .icon {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.text-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .btn--ghost {
   background: linear-gradient(var(--primary), var(--primary)) left / 0 100% no-repeat;
   transition: background-size 0.5s, transform 0.2s;
@@ -477,7 +572,7 @@ p + p {
   width: min(65%, 260px);
   aspect-ratio: 1 / 1.2;
   object-fit: cover;
-  object-position: top;
+  object-position: 50% 12%;
   border-radius: 66% 34% 49% 51% / 54% 22% 78% 46%;
 }
 
@@ -595,27 +690,53 @@ p + p {
 }
 
 /* 6. HOME ----------------------------------------------------------------- */
-.hero__tagline {
-  margin-top: 0.25em;
+.hero__eyebrow {
+  margin-bottom: 1em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: clamp(13px, 1vw + 8px, 18px);
+  opacity: 0.9;
+}
+
+.hero__title {
+  font-size: clamp(28px, 5vw + 8px, 60px);
+  line-height: 1.12;
+}
+
+.hero__sub {
+  display: block;
+  margin-top: 0.9em;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(17px, 1.3vw + 9px, 26px);
+  line-height: 1.4;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.25em;
 }
 
 .hero .btn {
-  margin-top: 2em;
-  padding-inline: clamp(2em, 7.5vw, 4em);
+  padding-inline: clamp(1.5em, 4vw, 2.5em);
+  letter-spacing: 1px;
 }
 
 .quote__author {
   font-weight: 400;
 }
 
-/* Beoordelingen */
+/* Beoordelingen (home: 3 korte kaarten, reviews-pagina: volledige kaarten) */
 .reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 4rem 1.25rem;
   overflow: hidden;
   color: #fff;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
@@ -623,16 +744,21 @@ p + p {
   box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
 }
 
+.reviews--home {
+  min-height: 100vh;
+}
+
 .reviews__head {
   text-align: center;
 }
 
-.reviews__head h2 {
+.reviews__eyebrow {
   color: #ccc;
-  text-transform: none;
+  font-weight: 700;
+  font-size: clamp(22px, 3.5vmin + 5px, 26px);
 }
 
-.reviews__head h1 {
+.reviews__title {
   margin: 0.4em 0;
   font-family: var(--font-body);
   font-weight: 500;
@@ -648,112 +774,54 @@ p + p {
   letter-spacing: 0.3em;
 }
 
+.review-grid,
+.review-stack {
+  width: min(100%, 1300px);
+  margin-top: 3rem;
+}
+
+.review-grid {
+  display: grid;
+  gap: 3.5rem;
+}
+
+.review-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.5rem;
+  max-width: 900px;
+}
+
+/* Slider op de home: één kaart tegelijk, pijlen + puntjes */
 .slider-view {
   width: 100%;
+  max-width: 1000px;
+  margin-top: 2rem;
   overflow: hidden;
 }
 
 .slider {
   display: flex;
-  transition: transform 0.8s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.8s cubic-bezier(0.7, 0, 0.2, 1);
 }
 
 .slide {
-  flex: 0 0 100%;
   display: flex;
-  align-items: center;
-  padding: 3rem 1.25rem;
+  flex: 0 0 100%;
+  align-items: stretch;
+  padding: 1.5rem 0.75rem 2.5rem;
 }
 
-.card {
-  position: relative;
-  width: min(100%, 900px);
+.slide .card {
+  max-width: 760px;
   margin-inline: auto;
-  padding: 2rem 1.25rem;
-  border: 0.5rem solid var(--primary);
-  border-radius: 2rem;
-  background: #fff;
-  color: #000;
-  text-align: center;
-}
-
-.card::before,
-.card::after {
-  position: absolute;
-  padding: 0 0.5rem;
-  background: #fff;
-  color: var(--primary);
-  font: 700 4rem/1 var(--font-head);
-}
-
-.card::before {
-  content: "\201C";
-  top: -1.5rem;
-  left: 8%;
-}
-
-.card::after {
-  content: "\201D";
-  bottom: -2.5rem;
-  right: 8%;
-  line-height: 0.9;
-}
-
-.card__photo {
-  width: min(50%, 160px);
-  aspect-ratio: 1;
-  margin: 0 auto 1em;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 50%;
-}
-
-.card h3 {
-  margin-bottom: 0.75rem;
-}
-
-.card__text {
-  position: relative;
-  max-height: 10em;
-  overflow: hidden;
-}
-
-.card__text.is-clipped::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 4em;
-  background: linear-gradient(transparent, #fff);
-}
-
-.card.is-open .card__text {
-  max-height: none;
-}
-
-.card.is-open .card__text::after {
-  display: none;
-}
-
-.card__client {
-  margin-top: 1em;
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.card__more {
-  display: none;
-  margin-top: 1em;
-}
-
-.card__more.is-needed {
-  display: inline-block;
 }
 
 .slider-controls {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .slider-arrow {
@@ -799,15 +867,97 @@ p + p {
   background: #fff;
 }
 
-@media (min-width: 1024px) {
-  .slide {
-    padding-inline: 15vw;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .slider {
     transition: none;
+  }
+}
+
+.reviews__all {
+  margin-top: 2.5rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1.25rem;
+  border: 0.5rem solid var(--primary);
+  border-radius: 2rem;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  color: var(--primary);
+  font: 700 4rem/1 var(--font-head);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.card::before {
+  content: "\201C";
+  top: 0.9rem;
+  left: 1.1rem;
+}
+
+.card::after {
+  content: "\201D";
+  bottom: -0.6rem;
+  right: 1.1rem;
+}
+
+.card__photo {
+  width: min(50%, 160px);
+  aspect-ratio: 1;
+  margin: 0 auto 1em;
+  object-fit: cover;
+  object-position: 50% 15%;
+  border-radius: 50%;
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.card__client {
+  margin-top: 1em;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.card--teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card--teaser h3 {
+  flex: none;
+}
+
+.card--teaser .card__client {
+  margin-bottom: 1.25em;
+}
+
+.card--teaser .btn {
+  margin-top: auto;
+}
+
+.card--full {
+  scroll-margin-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .review-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .card {
+    padding-inline: 2rem;
   }
 }
 
@@ -875,6 +1025,7 @@ p + p {
 
 .phase h3 {
   margin: 0.35rem 0 0 1rem;
+  font-size: clamp(18px, 2.2vmin + 6px, 22px);
   padding: 0.6em 1em 0.6em 3em;
   border-radius: 0 1em 1em 0;
   background: #ddd;
@@ -885,32 +1036,6 @@ p + p {
 .phase p {
   margin-top: 1rem;
   text-align: center;
-}
-
-.term {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--primary);
-  font: inherit;
-  cursor: pointer;
-}
-
-.term:hover {
-  text-decoration: underline;
-}
-
-.term-note {
-  margin-top: 0.75rem;
-  padding: 0.75rem 1rem;
-  border-radius: 5px;
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-}
-
-.term-note[hidden] {
-  display: none;
 }
 
 .offer-intro {
@@ -928,27 +1053,66 @@ p + p {
 
 .offer {
   display: flex;
-  flex: 1 1 300px;
+  flex: 1 1 320px;
   flex-direction: column;
-  max-width: 440px;
+  max-width: 560px;
 }
 
 .offer img {
   width: 100%;
   height: 40vmax;
-  max-height: 50vh;
+  max-height: 45vh;
   margin-bottom: 1.6rem;
   border: 0.2em solid var(--primary);
   border-radius: 5em 5em 0 0;
   object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.offer img[src*="aanbod-training"] {
+  object-position: 68% 30%;
+}
+
+.offer img[src*="aanbod-proefles"] {
+  object-position: 70% 28%;
 }
 
 .offer__body {
+  display: flex;
   flex: 1;
-  padding: 1em;
+  flex-direction: column;
+  padding: 1.25em;
   border-radius: 1em;
   background: #fff;
   box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.offer__body h3 {
+  margin-bottom: 0.75em;
+}
+
+.offer__body h4 {
+  margin: 1.25em 0 0.4em;
+  color: var(--primary);
+  font-size: 1em;
+}
+
+.offer__body h3 + p {
+  margin-top: 0;
+}
+
+.offer__price {
+  display: inline-block;
+  margin-top: 0.15em;
+  color: var(--primary);
+  font-family: var(--font-head);
+  font-size: 1.6em;
+}
+
+.offer__cta {
+  margin-top: auto;
+  padding-top: 1.25em;
   text-align: center;
 }
 
@@ -1161,4 +1325,294 @@ p + p {
 .lead {
   margin-top: 0.5em;
   text-align: center;
+}
+
+/* aanbod: aanvullingen */
+.lead--left {
+  text-align: left;
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.75rem 0 1.5rem;
+  list-style: none;
+}
+
+.chips li {
+  padding: 0.45em 1.1em;
+  border: 2px solid var(--primary);
+  border-radius: 2em;
+  background: #fff;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.skala-cta {
+  margin: 1.25em 0;
+  text-align: center;
+}
+
+.note-box {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 1.5rem 1.75rem;
+  border: 3px solid var(--primary);
+  border-radius: 1.5rem;
+  background: #fff;
+}
+
+.note-box h3 {
+  margin-bottom: 0.6rem;
+  color: var(--primary);
+}
+
+.fineprint {
+  margin-top: 1rem;
+  font-size: 0.85em;
+  color: #333;
+}
+
+.cta .btn-row + .fineprint {
+  margin-top: 1.5rem;
+}
+
+.cta-inline {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.story p {
+  text-align: left;
+}
+
+.notice {
+  padding: 1.25rem 1.5rem;
+  border-left: 6px solid var(--primary);
+  border-radius: 0 1rem 1rem 0;
+  background: #fff;
+  font-size: 1.15em;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* dialog (Skala-uitleg) */
+.dialog {
+  width: min(94vw, 1000px);
+  max-height: 92vh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 1.5rem;
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.dialog::backdrop {
+  background: rgba(2, 16, 23, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.dialog[open] {
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+
+.dialog__inner {
+  max-height: 92vh;
+  padding: 2rem clamp(1.25rem, 4vw, 3rem) 2rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.dialog__title {
+  padding-right: 2.5rem;
+  font-size: clamp(24px, 4vmin + 8px, 40px);
+}
+
+.dialog__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.dialog__close:hover {
+  background: var(--primary-dark);
+}
+
+.dialog__img {
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+}
+
+.skala-list {
+  display: grid;
+  gap: 0.9rem;
+  list-style: none;
+}
+
+.skala-list li {
+  padding: 0.8rem 1rem;
+  border-left: 5px solid var(--primary);
+  background: #faf3f3;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.skala-list strong {
+  color: var(--primary);
+}
+
+.dialog__foot {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+html.has-dialog {
+  overflow: hidden;
+}
+
+/* faq */
+.faq {
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.faq__item {
+  border: 2px solid var(--primary);
+  border-radius: 1.25rem;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.faq__item[open] {
+  box-shadow: 0 0.2em 1em rgba(127, 23, 16, 0.18);
+}
+
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary:hover {
+  background: #faf3f3;
+  border-radius: 1.1rem;
+}
+
+.faq__chev {
+  transition: transform 0.3s;
+}
+
+.faq__item[open] .faq__chev {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  padding: 0 1.25rem 1.25rem;
+}
+
+/* contact */
+.contact-intro__cta {
+  margin-top: 1.75rem;
+}
+
+.field--submit .fineprint {
+  margin-top: 1rem;
+}
+
+/* zachte fade-in bij scrollen (alleen met JS en zonder reduced-motion) */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .js .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .btn,
+  .faq__item,
+  .offer__body {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s, color 0.3s;
+  }
+
+  .offer__body:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 767px) {
+  .nav a {
+    font-size: 20px;
+  }
+}
+
+.story .cta-inline {
+  text-align: center;
+}
+
+/* Reviews-pagina: lichte sectie met bellen, kaarten blijven wit met bordeaux rand */
+.reviews-page .reviews__head {
+  padding-top: 1rem;
+}
+
+.reviews-page .reviews__eyebrow {
+  color: var(--primary);
+}
+
+.reviews-page .reviews__title {
+  color: var(--ink);
+}
+
+.reviews-page .review-stack {
+  margin-inline: auto;
+}
+
+.reviews-page .btn--light {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.reviews-page .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

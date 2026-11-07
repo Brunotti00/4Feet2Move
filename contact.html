@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact en afspraak maken | 4Feet2Move</title>
-    <meta name="description" content="Neem contact op met 4Feet2Move voor een vraag, proefles of afspraak. Vul het formulier in of bel/mail. Gevestigd in Heerhugowaard, actief in Noord-Holland." />
+    <meta name="description" content="Neem contact op met 4Feet2Move voor een vraag, proefles of afspraak. Maak een afspraak via WhatsApp, mail of het formulier. Gevestigd in Heerhugowaard, actief in Noord-Holland." />
     <meta name="theme-color" content="#7f1710" />
     <link rel="canonical" href="https://4feet2move.com/contact.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nl_NL" />
     <meta property="og:site_name" content="4Feet2Move" />
     <meta property="og:title" content="Contact en afspraak maken | 4Feet2Move" />
-    <meta property="og:description" content="Neem contact op met 4Feet2Move voor een vraag, proefles of afspraak. Vul het formulier in of bel/mail. Gevestigd in Heerhugowaard, actief in Noord-Holland." />
+    <meta property="og:description" content="Neem contact op met 4Feet2Move voor een vraag, proefles of afspraak. Maak een afspraak via WhatsApp, mail of het formulier. Gevestigd in Heerhugowaard, actief in Noord-Holland." />
     <meta property="og:url" content="https://4feet2move.com/contact.html" />
-    <meta property="og:image" content="https://4feet2move.com/images/hero-home.webp" />
+    <meta property="og:image" content="https://4feet2move.com/images/hero-contact.webp" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,8 +38,10 @@
       </label>
       <nav class="nav" aria-label="Hoofdmenu">
         <a href="index.html">Home</a>
-        <a href="over-mij.html">Over mij</a>
         <a href="aanbod.html">Aanbod</a>
+        <a href="over-mij.html">Over mij</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
     </header>
@@ -53,8 +55,8 @@
 
       <section class="pattern">
         <div class="wrap">
-          <div class="contact-intro">
-            <h1>Contact</h1>
+          <div class="contact-intro reveal">
+            <h2 class="title">Contact</h2>
             <hr class="divider" />
             <p>
               Neem geheel vrijblijvend contact met ons op en ontdek hoe 4Feet2Move
@@ -62,11 +64,15 @@
               effectieve communicatie. We kijken ernaar uit om van je te horen en
               te ontdekken hoe we samen jouw doelen kunnen realiseren.
             </p>
+            <p class="contact-intro__cta">
+              <a class="btn btn--wa" href="https://wa.me/31648481106?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chat" /></svg><span>Maak een afspraak via WhatsApp</span></a>
+            </p>
+            <p class="fineprint">Bij het inplannen van een afspraak ga je automatisch akkoord met de <a class="text-link" href="algemene-voorwaarden.html">algemene voorwaarden</a>.</p>
           </div>
 
           <div class="contact-grid">
-            <form class="contact-form" action="https://formsubmit.co/ab9910375fd0548c9ab83da17e540ea9" method="post">
-              <h2>Contactformulier</h2>
+            <form class="contact-form" id="formulier" action="https://formsubmit.co/ab9910375fd0548c9ab83da17e540ea9" method="post">
+              <h2>Liever een bericht sturen?</h2>
               <p class="form-notice" data-sent-notice hidden role="status">Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.</p>
               <input type="hidden" name="_subject" value="Contact 4feet2move" />
               <input type="hidden" name="_next" value="https://4feet2move.com/contact.html?verzonden=1" />
@@ -112,9 +118,8 @@
                   <select id="onderwerp" name="onderwerp" required>
                     <option value="">-- Kies een optie --</option>
                     <option value="Vraag">Vraag</option>
-                    <option value="Proefles25">Proefles &euro;25</option>
-                    <option value="Training35">Losse training &euro;35</option>
-                    <option value="5Training150">5-Lessen pakket &euro;150</option>
+                    <option value="Proefles25">Proefles (&euro;25)</option>
+                    <option value="Training35">Les of training op locatie (&euro;35)</option>
                   </select>
                 </div>
                 <div class="field">
@@ -123,11 +128,12 @@
                 </div>
                 <div class="field field--submit">
                   <button class="btn" type="submit">Verstuur</button>
+                  <p class="fineprint">Bij het inplannen van een afspraak ga je automatisch akkoord met de <a class="text-link" href="algemene-voorwaarden.html">algemene voorwaarden</a>.</p>
                 </div>
               </div>
             </form>
 
-            <div class="details">
+            <div class="details reveal">
               <h2>Gegevens</h2>
               <dl>
                 <dt>Postadres</dt>
@@ -142,7 +148,7 @@
               </dl>
             </div>
 
-            <div class="route">
+            <div class="route reveal">
               <h2>Route</h2>
               <div class="route__map">
                 <iframe
@@ -162,10 +168,13 @@
     <footer class="site-footer">
       <img class="logo-footer" src="images/logo-bordeaux.webp" alt="4Feet2Move logo" width="400" height="454" loading="lazy" />
       <nav class="footer-nav" aria-label="Footermenu">
-      <a href="index.html">Home</a>
-      <a href="over-mij.html">Over mij</a>
-      <a href="aanbod.html">Aanbod</a>
-      <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-mij.html">Over mij</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
       </nav>
       <div class="socials">
         <a href="https://www.instagram.com/4feet2move/" target="_blank" rel="noopener" aria-label="4Feet2Move op Instagram">
