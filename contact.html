@@ -3,179 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact en afspraak maken | 4Feet2Move</title>
-    <meta name="description" content="Neem contact op met 4Feet2Move voor een vraag, proefles of afspraak. Vul het formulier in of bel/mail. Gevestigd in Heerhugowaard, actief in Noord-Holland." />
+    <title>Contact – 4Feet2Move | Maak een afspraak</title>
+    <meta name="description" content="Maak een afspraak via WhatsApp of neem contact op met 4Feet2Move in Heerhugowaard. Paardentraining op locatie in Noord-Holland." />
     <meta name="theme-color" content="#7f1710" />
     <link rel="canonical" href="https://4feet2move.com/contact.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nl_NL" />
     <meta property="og:site_name" content="4Feet2Move" />
-    <meta property="og:title" content="Contact en afspraak maken | 4Feet2Move" />
-    <meta property="og:description" content="Neem contact op met 4Feet2Move voor een vraag, proefles of afspraak. Vul het formulier in of bel/mail. Gevestigd in Heerhugowaard, actief in Noord-Holland." />
+    <meta property="og:title" content="Contact – 4Feet2Move | Maak een afspraak" />
+    <meta property="og:description" content="Maak een afspraak via WhatsApp of neem contact op met 4Feet2Move in Heerhugowaard. Paardentraining op locatie in Noord-Holland." />
     <meta property="og:url" content="https://4feet2move.com/contact.html" />
-    <meta property="og:image" content="https://4feet2move.com/images/hero-home.webp" />
+    <meta property="og:image" content="https://4feet2move.com/images/hero-contact.webp" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Figtree:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
     <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Naar de inhoud</a>
     <header class="site-header">
-      <a class="logo" href="index.html">
-        <img src="images/logo-wit.webp" alt="4Feet2Move – home" width="400" height="453" />
+      <a class="logo" href="index.html" aria-label="4Feet2Move - naar de homepage">
+        <img class="logo--light" src="images/logo-wit.webp" alt="" width="400" height="454" />
+        <img class="logo--solid" src="images/logo-bordeaux.webp" alt="" width="400" height="454" />
       </a>
-      <input type="checkbox" id="menu-check" class="menu-check" />
-      <label for="menu-check" class="menu-btn">
-        <span class="sr-only">Menu openen of sluiten</span>
-        <svg class="icon icon-open" aria-hidden="true"><use href="images/icons.svg#menu" /></svg>
-        <svg class="icon icon-close" aria-hidden="true"><use href="images/icons.svg#close" /></svg>
-      </label>
-      <nav class="nav" aria-label="Hoofdmenu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu openen"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Hoofdmenu">
         <a href="index.html">Home</a>
-        <a href="over-mij.html">Over mij</a>
         <a href="aanbod.html">Aanbod</a>
+        <a href="over-mij.html">Over mij</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
         <a href="contact.html" aria-current="page">Contact</a>
+        <a class="btn" href="contact.html?onderwerp=Proefles25#formulier">Proefles aanvragen</a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero hero--contact hero--shade">
+      <section class="hero hero--page">
+        <div class="hero__media" data-parallax="0.12"><img src="images/hero-contact.webp" alt="" /></div>
         <div class="hero__inner">
+          <p class="eyebrow">Maak een afspraak</p>
           <h1>Contact</h1>
         </div>
       </section>
 
-      <section class="pattern">
+      <section class="section" style="padding-top:0;overflow:visible;overflow-x:clip">
+        <span class="blob blob--blush" style="width:30rem;height:30rem;left:-10rem;top:20rem" aria-hidden="true"></span>
         <div class="wrap">
-          <div class="contact-intro">
-            <h1>Contact</h1>
-            <hr class="divider" />
-            <p>
-              Neem geheel vrijblijvend contact met ons op en ontdek hoe 4Feet2Move
-              jou en je paard kan begeleiden naar een diepere harmonie en
-              effectieve communicatie. We kijken ernaar uit om van je te horen en
-              te ontdekken hoe we samen jouw doelen kunnen realiseren.
-            </p>
+          <div class="pull-up">
+            <div class="whatsapp-card reveal">
+              <div>
+                <h2>Een afspraak maken? Stuur een WhatsApp.</h2>
+                <p>Neem geheel vrijblijvend contact met ons op en ontdek hoe 4Feet2Move jou en je paard kan begeleiden naar een diepere harmonie en effectieve communicatie. We kijken ernaar uit om van je te horen en te ontdekken hoe we samen jouw doelen kunnen realiseren.</p>
+              </div>
+              <div class="btn-row"><a class="btn btn--light" href="https://wa.me/31648481106?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#whatsapp"/></svg> Plan via WhatsApp</a></div>
+            </div>
           </div>
 
-          <div class="contact-grid">
-            <form class="contact-form" action="https://formsubmit.co/ab9910375fd0548c9ab83da17e540ea9" method="post">
-              <h2>Contactformulier</h2>
-              <p class="form-notice" data-sent-notice hidden role="status">Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.</p>
-              <input type="hidden" name="_subject" value="Contact 4feet2move" />
-              <input type="hidden" name="_next" value="https://4feet2move.com/contact.html?verzonden=1" />
-              <input type="hidden" name="_autoresponse" value="Dank je wel voor het benaderen van 4Feet2Move. &#10;&#10;Ik heb je bericht ontvangen en zal er zo snel mogelijk op reageren. &#10;&#10;Met vriendelijke groet,&#10;&#10;Tyra van Beek&#10;4Feet2Move" />
-              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="details-grid">
+            <div class="detail reveal"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#mail"/></svg><h3>E-mail</h3><p><a href="mailto:4feet2move@gmail.com">4feet2move@gmail.com</a></p></div>
+            <div class="detail reveal" style="--d:100"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#phone"/></svg><h3>Telefoon</h3><p><a href="tel:+31648481106">+31 6 48 48 11 06</a></p></div>
+            <div class="detail reveal" style="--d:200"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#pin"/></svg><h3>Postadres</h3><p>Jac. van Maerlantlaan 56<br />1702 GP Heerhugowaard</p></div>
+          </div>
+          <div class="company reveal"><span>4Feet2Move</span><span>BTW-nummer: NL004782448B45</span><span>KvK-nummer: 90002903</span></div>
+          <div class="socials reveal" style="margin-top:1.5rem;--d:100">
+            <a href="https://www.instagram.com/4feet2move/" target="_blank" rel="noopener" aria-label="4Feet2Move op Instagram" style="color:var(--bord);border-color:var(--bord)"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#instagram"/></svg></a>
+            <a href="https://www.facebook.com/people/4Feet2Move/100089917523354/" target="_blank" rel="noopener" aria-label="4Feet2Move op Facebook" style="color:var(--bord);border-color:var(--bord)"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#facebook"/></svg></a>
+          </div>
 
-              <div class="form-fields">
-                <div class="field">
-                  <label for="naam">Naam*</label>
-                  <input type="text" id="naam" name="naam" autocomplete="name" required />
-                </div>
-                <div class="form-pair">
-                  <div class="field">
-                    <label for="email">E-mailadres*</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required />
-                  </div>
-                  <div class="field">
-                    <label for="telefoon">Telefoonnummer</label>
-                    <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" />
-                  </div>
-                </div>
-                <div class="form-pair">
-                  <div class="field">
-                    <label for="ras">Ras</label>
-                    <input type="text" id="ras" name="ras" />
-                  </div>
-                  <div class="field">
-                    <label for="leeftijd">Leeftijd paard</label>
-                    <input type="text" id="leeftijd" name="leeftijd" inputmode="numeric" />
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="geslacht">Geslacht paard</label>
-                  <select id="geslacht" name="geslacht">
-                    <option value="">-- Kies een optie --</option>
-                    <option>Merrie</option>
-                    <option>Hengst</option>
-                    <option>Ruin</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="onderwerp">Onderwerp*</label>
-                  <select id="onderwerp" name="onderwerp" required>
-                    <option value="">-- Kies een optie --</option>
-                    <option value="Vraag">Vraag</option>
-                    <option value="Proefles25">Proefles &euro;25</option>
-                    <option value="Training35">Losse training &euro;35</option>
-                    <option value="5Training150">5-Lessen pakket &euro;150</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="bericht">Bericht*</label>
-                  <textarea id="bericht" name="bericht" rows="8" required></textarea>
-                </div>
-                <div class="field field--submit">
-                  <button class="btn" type="submit">Verstuur</button>
-                </div>
+          <form class="form-card reveal" id="formulier" action="https://formsubmit.co/ab9910375fd0548c9ab83da17e540ea9" method="post">
+            <h2>Liever een bericht via het formulier?</h2>
+            <p class="form-notice" data-sent-notice hidden role="status">Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.</p>
+            <input type="hidden" name="_subject" value="Contact 4feet2move" />
+            <input type="hidden" name="_next" value="https://4feet2move.com/contact.html?verzonden=1" />
+            <input type="hidden" name="_autoresponse" value="Dank je wel voor het benaderen van 4Feet2Move. &#10;&#10;Ik heb je bericht ontvangen en zal er zo snel mogelijk op reageren. &#10;&#10;Met vriendelijke groet,&#10;&#10;Tyra van Beek&#10;4Feet2Move" />
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="form-fields">
+              <div class="field"><label for="naam">Naam*</label><input type="text" id="naam" name="naam" autocomplete="name" required /></div>
+              <div class="form-pair">
+                <div class="field"><label for="email">E-mailadres*</label><input type="email" id="email" name="email" autocomplete="email" required /></div>
+                <div class="field"><label for="telefoon">Telefoonnummer</label><input type="tel" id="telefoon" name="telefoon" autocomplete="tel" /></div>
               </div>
-            </form>
-
-            <div class="details">
-              <h2>Gegevens</h2>
-              <dl>
-                <dt>Postadres</dt>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail" /></svg> Jac. van Maerlantlaan 56</dd>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#pin" /></svg> 1702 GP Heerhugowaard</dd>
-                <dt>Bedrijfsgegevens</dt>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#building" /></svg> 4Feet2Move</dd>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail" /></svg> <a href="mailto:4feet2move@gmail.com">4feet2move@gmail.com</a></dd>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#phone" /></svg> <a href="tel:+31648481106">+31 6 48 48 11 06</a></dd>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#doc" /></svg> BTW-nummer: NL004782448B45</dd>
-                <dd><svg class="icon" aria-hidden="true"><use href="images/icons.svg#doc" /></svg> KvK-nummer: 90002903</dd>
-              </dl>
-            </div>
-
-            <div class="route">
-              <h2>Route</h2>
-              <div class="route__map">
-                <iframe
-                  title="Kaart met de locatie van 4Feet2Move in Heerhugowaard"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4838.829973044621!2d4.835915376080112!3d52.670543572100975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cf541505cfee47%3A0xea599e76501b758d!2sJac.%20van%20Maerlantlaan%2056%2C%201702%20GP%20Heerhugowaard!5e0!3m2!1snl!2snl!4v1755624463920!5m2!1snl!2snl"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+              <div class="form-pair">
+                <div class="field"><label for="ras">Ras</label><input type="text" id="ras" name="ras" /></div>
+                <div class="field"><label for="leeftijd">Leeftijd paard</label><input type="text" id="leeftijd" name="leeftijd" inputmode="numeric" /></div>
               </div>
+              <div class="field">
+                <label for="geslacht">Geslacht paard</label>
+                <select id="geslacht" name="geslacht"><option value="">-- Kies een optie --</option><option>Merrie</option><option>Hengst</option><option>Ruin</option></select>
+              </div>
+              <div class="field">
+                <label for="onderwerp">Onderwerp*</label>
+                <select id="onderwerp" name="onderwerp" required>
+                  <option value="">-- Kies een optie --</option>
+                  <option value="Vraag">Vraag</option>
+                  <option value="Proefles25">Proefles &euro;25</option>
+                  <option value="Les35">Les of training op locatie &euro;35</option>
+                </select>
+              </div>
+              <div class="field"><label for="bericht">Bericht*</label><textarea id="bericht" name="bericht" rows="7" required></textarea></div>
+              <p class="fineprint" style="margin:0">Bij het inplannen van afspraak ga je automatisch akkoord met <a href="algemene-voorwaarden.html">algemene voorwaarden</a>.</p>
+              <div><button class="btn" type="submit">Verstuur</button></div>
             </div>
+          </form>
+
+          <div class="map reveal">
+            <iframe title="Kaart met de locatie van 4Feet2Move in Heerhugowaard" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4838.829973044621!2d4.835915376080112!3d52.670543572100975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cf541505cfee47%3A0xea599e76501b758d!2sJac.%20van%20Maerlantlaan%2056%2C%201702%20GP%20Heerhugowaard!5e0!3m2!1snl!2snl!4v1755624463920!5m2!1snl!2snl" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
-      <img class="logo-footer" src="images/logo-bordeaux.webp" alt="4Feet2Move logo" width="400" height="454" loading="lazy" />
-      <nav class="footer-nav" aria-label="Footermenu">
-      <a href="index.html">Home</a>
-      <a href="over-mij.html">Over mij</a>
-      <a href="aanbod.html">Aanbod</a>
-      <a href="contact.html">Contact</a>
-      </nav>
-      <div class="socials">
-        <a href="https://www.instagram.com/4feet2move/" target="_blank" rel="noopener" aria-label="4Feet2Move op Instagram">
-          <img src="images/instagram.svg" alt="" width="64" height="64" loading="lazy" />
-        </a>
-        <a href="https://www.facebook.com/people/4Feet2Move/100089917523354/" target="_blank" rel="noopener" aria-label="4Feet2Move op Facebook">
-          <img src="images/facebook.svg" alt="" width="64" height="64" loading="lazy" />
-        </a>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo-wit.webp" alt="4Feet2Move" width="400" height="454" loading="lazy" />
+            <p>Training en instructie op maat.</p>
+          </div>
+          <div>
+            <h2>Menu</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li><li><a href="aanbod.html">Aanbod</a></li><li><a href="over-mij.html">Over mij</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="https://wa.me/31648481106?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="mailto:4feet2move@gmail.com">4feet2move@gmail.com</a></li>
+              <li><a href="tel:+31648481106">+31 6 48 48 11 06</a></li>
+              <li>Jac. van Maerlantlaan 56<br />1702 GP Heerhugowaard</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Volg ons</h2>
+            <ul><li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li></ul>
+            <div class="socials">
+              <a href="https://www.instagram.com/4feet2move/" target="_blank" rel="noopener" aria-label="4Feet2Move op Instagram"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#instagram"/></svg></a>
+              <a href="https://www.facebook.com/people/4Feet2Move/100089917523354/" target="_blank" rel="noopener" aria-label="4Feet2Move op Facebook"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#facebook"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year>2026</span> 4Feet2Move. Alle rechten voorbehouden.</p>
+          <p>KvK 90002903 &middot; BTW NL004782448B45</p>
+        </div>
       </div>
-      <p>&copy; <span data-year>2026</span> 4Feet2Move. Alle rechten voorbehouden.</p>
     </footer>
   </body>
 </html>
