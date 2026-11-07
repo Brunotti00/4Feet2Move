@@ -1,0 +1,1164 @@
+/* ==========================================================================
+   4Feet2Move – één stylesheet voor alle pagina's
+   Opbouw: 1 Basis · 2 Header · 3 Hero · 4 Secties & achtergrond · 5 Onderdelen
+           6 Home · 7 Over mij · 8 Aanbod · 9 Contact · 10 Footer
+   Mobile-first: alles hieronder geldt voor mobiel, @media (min-width) vult aan.
+   Breakpoints: 768px (tablet/menu) en 1024px (desktop).
+   ========================================================================== */
+
+/* 1. BASIS ---------------------------------------------------------------- */
+:root {
+  --primary: #7f1710;
+  --primary-dark: #6b0d06;
+  --ink: #021017;
+  --text: #000;
+  --light: #f5f5f5;
+  --gold: #ffdc3e;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-head: "Playfair Display", Georgia, serif;
+  --fs: clamp(16px, 1.25vw + 5px, 20px);
+  --gutter: clamp(20px, 8vw, 120px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs);
+  line-height: 1.5;
+  color: var(--text);
+  background: #fff;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(28px, 9vmin + 5px, 72px);
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: clamp(22px, 3.5vmin + 5px, 26px);
+}
+
+h3 {
+  line-height: 1.2;
+  font-size: clamp(20px, 3vmin + 5px, 24px);
+}
+
+p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 200;
+  padding: 0.6em 1em;
+  background: #fff;
+  color: var(--primary);
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+}
+
+@media (min-width: 768px) {
+  p {
+    hyphens: none;
+  }
+}
+
+/* 2. HEADER --------------------------------------------------------------- */
+.site-header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(24px, 8vmin, 80px) clamp(20px, 8vmin, 80px) 1vw;
+  color: #fff;
+}
+
+.logo img {
+  width: clamp(75px, 25vmin, 200px);
+}
+
+.nav {
+  display: flex;
+  gap: clamp(15px, 2vw, 40px);
+}
+
+.nav a {
+  position: relative;
+  font-weight: 700;
+  font-size: clamp(16px, 1.25vw + 7.5px, 30px);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.15em;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after,
+.nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Menuknop (alleen mobiel): checkbox + label, geen JavaScript nodig */
+.menu-check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 2.2rem;
+}
+
+.menu-btn .icon {
+  width: 1em;
+  height: 1em;
+}
+
+.menu-btn .icon-close,
+.menu-check:checked ~ .menu-btn .icon-open {
+  display: none;
+}
+
+.menu-check:checked ~ .menu-btn .icon-close {
+  display: block;
+}
+
+.menu-check:focus-visible ~ .menu-btn {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  }
+
+  .menu-check:checked ~ .nav {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav a {
+    padding: 0.5rem;
+    font-size: 22px;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  .nav a[aria-current="page"] {
+    color: #f0bebe;
+  }
+}
+
+/* 3. HERO ----------------------------------------------------------------- */
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 25vh var(--gutter) 15vh;
+  color: #fff;
+  text-align: center;
+  background: var(--hero-img) center / cover no-repeat;
+}
+
+/* donker vignet over de foto, zodat witte tekst leesbaar blijft */
+.hero::before,
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.7) 70%
+  );
+}
+
+.hero--shade::before {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.7) 70%);
+}
+
+.hero--home {
+  --hero-img: url(images/hero-home.webp);
+  background-position: 60% top;
+}
+
+.hero--over-mij {
+  --hero-img: url(images/hero-over-mij.webp);
+}
+
+.hero--aanbod {
+  --hero-img: url(images/hero-aanbod.webp);
+  background-position: 75% top;
+}
+
+.hero--contact {
+  --hero-img: url(images/hero-contact.webp);
+}
+
+.hero__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 800px);
+}
+
+.hero h1,
+.band h1 {
+  color: #fff;
+}
+
+.hero h2,
+.band h2 {
+  color: #fff;
+}
+
+/* 4. SECTIES & ACHTERGROND ------------------------------------------------ */
+
+/* Lichte sectie met patroon, rode golf boven en (gespiegeld) onder */
+.pattern {
+  background: var(--light) url(images/pattern-blobs.svg) center top / cover no-repeat;
+}
+
+.pattern::before,
+.pattern::after {
+  content: "";
+  display: block;
+  height: clamp(80px, 11vw, 160px);
+  background: url(images/wave.svg) center / 100% 100% no-repeat;
+}
+
+.pattern::after {
+  transform: scaleY(-1);
+}
+
+@media (min-width: 1024px) {
+  .pattern {
+    background-image: url(images/pattern-circles.svg);
+  }
+}
+
+.wrap {
+  width: min(100%, 1400px);
+  margin-inline: auto;
+  padding: clamp(24px, 5vw, 64px) var(--gutter);
+}
+
+.wrap + .wrap {
+  padding-top: 0;
+}
+
+/* Brede fotoband met tekst (quote, missie) */
+.band {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding: 3rem var(--gutter);
+  color: #fff;
+  text-align: center;
+  background: url(images/quote-achtergrond.webp) 65% top / cover no-repeat;
+}
+
+.band > * {
+  position: relative;
+}
+
+.band q {
+  quotes: "\201C" "\201D";
+}
+
+@media (min-width: 1024px) {
+  .band--tall {
+    min-height: 100vh;
+  }
+}
+
+/* Foto met rode laag ertussen de secties (aanbod) */
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: min(56.25vw, 80vh);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(127, 23, 16, 0.6);
+}
+
+/* 5. ONDERDELEN ----------------------------------------------------------- */
+.divider {
+  width: 5em;
+  height: 0.3em;
+  margin: 1em auto;
+  border: 0;
+  background: var(--primary);
+}
+
+/* Knoppen */
+.btn {
+  display: inline-block;
+  padding: 0.9em 2.5em;
+  border: 0.15em solid var(--primary);
+  border-radius: 2em;
+  background: var(--primary);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}
+
+.btn:active {
+  background-color: var(--primary-dark);
+  transform: scale(0.95);
+}
+
+.btn--small {
+  padding: 0.5em 1.6em;
+  border-radius: 1em;
+}
+
+.btn--ghost {
+  background: linear-gradient(var(--primary), var(--primary)) left / 0 100% no-repeat;
+  transition: background-size 0.5s, transform 0.2s;
+}
+
+.btn--ghost:hover {
+  background-size: 100% 100%;
+  transform: none;
+}
+
+/* Tekst + afbeelding naast elkaar (mobiel: onder elkaar) */
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.split + .split {
+  margin-top: 3rem;
+}
+
+.split__text {
+  flex: 1;
+}
+
+.split__text .btn {
+  margin-top: 1.5em;
+}
+
+.split__text h2 {
+  margin-bottom: 0.75rem;
+}
+
+.split__img {
+  width: min(65%, 260px);
+  aspect-ratio: 1 / 1.2;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 66% 34% 49% 51% / 54% 22% 78% 46%;
+}
+
+.split__img--welkom {
+  border-radius: 57% 43% 56% 44% / 48% 37% 63% 52%;
+}
+
+.split__img--round {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.split__img--about {
+  border-radius: 66% 33% 63% 37% / 56% 41% 41% 45%;
+}
+
+@media (min-width: 1024px) {
+  .split {
+    flex-direction: row;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  .split--flip {
+    flex-direction: row-reverse;
+  }
+
+  .split__img {
+    width: min(30%, 300px);
+    flex: none;
+  }
+
+  .split__text h1,
+  .split__text h2,
+  .split__text .btn-row {
+    text-align: left;
+  }
+
+  .split__text .divider {
+    margin-left: 0;
+  }
+}
+
+/* Icoon naast tekst (kernwaarden, samenwerkingen) */
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.feature + .feature {
+  margin-top: 3rem;
+}
+
+.feature__icon {
+  width: min(45vw, 200px);
+  aspect-ratio: 1;
+  flex: none;
+  padding: 15%;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--primary);
+}
+
+.feature__icon--plain {
+  background: none;
+  padding: 0;
+}
+
+.feature--2 .feature__icon {
+  background: #7e163a;
+}
+
+.feature--3 .feature__icon {
+  background: #6b2a58;
+}
+
+.feature--4 .feature__icon {
+  background: #4d3a67;
+}
+
+.feature__text h2 {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .feature {
+    flex-direction: row;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  .feature--flip {
+    flex-direction: row-reverse;
+  }
+
+  .feature__text {
+    flex: 1;
+  }
+
+  .feature__text h1,
+  .feature__text h2 {
+    text-align: left;
+  }
+
+  .feature__text .divider {
+    margin-left: 0;
+  }
+
+  .feature__icon--plain {
+    width: 200px;
+  }
+}
+
+/* 6. HOME ----------------------------------------------------------------- */
+.hero__tagline {
+  margin-top: 0.25em;
+}
+
+.hero .btn {
+  margin-top: 2em;
+  padding-inline: clamp(2em, 7.5vw, 4em);
+}
+
+.quote__author {
+  font-weight: 400;
+}
+
+/* Beoordelingen */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 3rem 0;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(images/reviews-achtergrond.webp) center / cover no-repeat;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+}
+
+.reviews__head {
+  text-align: center;
+}
+
+.reviews__head h2 {
+  color: #ccc;
+  text-transform: none;
+}
+
+.reviews__head h1 {
+  margin: 0.4em 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(24px, 5vw + 12px, 42px);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.stars {
+  color: var(--gold);
+  font-size: clamp(1.2rem, 3vw + 0.5rem, 2rem);
+  letter-spacing: 0.3em;
+}
+
+.slider-view {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  padding: 3rem 1.25rem;
+}
+
+.card {
+  position: relative;
+  width: min(100%, 900px);
+  margin-inline: auto;
+  padding: 2rem 1.25rem;
+  border: 0.5rem solid var(--primary);
+  border-radius: 2rem;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  padding: 0 0.5rem;
+  background: #fff;
+  color: var(--primary);
+  font: 700 4rem/1 var(--font-head);
+}
+
+.card::before {
+  content: "\201C";
+  top: -1.5rem;
+  left: 8%;
+}
+
+.card::after {
+  content: "\201D";
+  bottom: -2.5rem;
+  right: 8%;
+  line-height: 0.9;
+}
+
+.card__photo {
+  width: min(50%, 160px);
+  aspect-ratio: 1;
+  margin: 0 auto 1em;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.card__text {
+  position: relative;
+  max-height: 10em;
+  overflow: hidden;
+}
+
+.card__text.is-clipped::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 4em;
+  background: linear-gradient(transparent, #fff);
+}
+
+.card.is-open .card__text {
+  max-height: none;
+}
+
+.card.is-open .card__text::after {
+  display: none;
+}
+
+.card__client {
+  margin-top: 1em;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.card__more {
+  display: none;
+  margin-top: 1em;
+}
+
+.card__more.is-needed {
+  display: inline-block;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.slider-arrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.slider-arrow:hover {
+  background: #fff;
+}
+
+.slider-arrow .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dots button {
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.dots button[aria-current="true"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    padding-inline: 15vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider {
+    transition: none;
+  }
+}
+
+/* 7. OVER MIJ ------------------------------------------------------------- */
+/* (alles via .split, .feature en .band hierboven) */
+
+/* 8. AANBOD --------------------------------------------------------------- */
+.prose {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.prose::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.prose-icon {
+  width: min(40%, 160px);
+  margin: 0 auto 1em;
+}
+
+@media (min-width: 768px) {
+  .prose-icon--right {
+    float: right;
+    margin: 0.5em 0 0.5em 1.5em;
+  }
+
+  .prose-icon--left {
+    float: left;
+    margin: 0.5em 1.5em 0.5em 0;
+  }
+}
+
+.phases {
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  list-style: none;
+  counter-reset: phase;
+}
+
+.phase {
+  position: relative;
+  margin: 0 0 2.5rem 1.5rem;
+  counter-increment: phase;
+}
+
+.phase::before {
+  content: counter(phase);
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0.25rem solid var(--light);
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.phase h3 {
+  margin: 0.35rem 0 0 1rem;
+  padding: 0.6em 1em 0.6em 3em;
+  border-radius: 0 1em 1em 0;
+  background: #ddd;
+  color: #444;
+  text-align: center;
+}
+
+.phase p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.term {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.term:hover {
+  text-decoration: underline;
+}
+
+.term-note {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+}
+
+.term-note[hidden] {
+  display: none;
+}
+
+.offer-intro {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem 2rem;
+}
+
+.offer {
+  display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
+  max-width: 440px;
+}
+
+.offer img {
+  width: 100%;
+  height: 40vmax;
+  max-height: 50vh;
+  margin-bottom: 1.6rem;
+  border: 0.2em solid var(--primary);
+  border-radius: 5em 5em 0 0;
+  object-fit: cover;
+}
+
+.offer__body {
+  flex: 1;
+  padding: 1em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.offer__body h2 {
+  margin-bottom: 0.5em;
+}
+
+.cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 1rem;
+}
+
+/* 9. CONTACT -------------------------------------------------------------- */
+.contact-intro {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.contact-grid h2 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 3rem 3vw;
+  }
+
+  .contact-form {
+    grid-row: span 2;
+  }
+}
+
+.form-fields {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-pair {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .form-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 3px solid rgba(127, 23, 16, 0.35);
+  outline-offset: 1px;
+}
+
+.field--submit {
+  text-align: center;
+}
+
+.hp {
+  display: none;
+}
+
+.form-notice {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 5px solid var(--primary);
+  background: #fff;
+  font-weight: 700;
+}
+
+.details h2 {
+  margin-top: 0;
+}
+
+.details dl {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.details dt {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.details dt:first-child {
+  margin-top: 0;
+}
+
+.details dd {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.route__map {
+  overflow: hidden;
+  border: 3px solid var(--primary);
+  border-radius: 3px;
+}
+
+.route__map iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 0;
+}
+
+/* 10. FOOTER -------------------------------------------------------------- */
+.site-footer {
+  padding: 2rem 1rem;
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+}
+
+.site-footer > * + * {
+  margin-top: 1.5rem;
+}
+
+.site-footer .logo-footer {
+  width: 10em;
+  margin-inline: auto;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-nav a {
+  padding: 0.5em 1em;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #f0bebe;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.socials a {
+  display: block;
+  width: min(4em, 14vw);
+  height: min(4em, 14vw);
+  border-radius: 50%;
+  background: #fff;
+  transition: background-color 0.3s;
+}
+
+.socials a:hover {
+  background: var(--primary);
+}
+
+.socials img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .footer-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* kleine hulpklassen aanbod */
+.prose--spaced {
+  margin-top: 2.5rem;
+}
+
+.lead {
+  margin-top: 0.5em;
+  text-align: center;
+}
