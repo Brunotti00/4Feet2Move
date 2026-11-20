@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://4feet2move.com/sitemap.xml

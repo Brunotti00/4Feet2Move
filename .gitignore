@@ -1,0 +1,5 @@
+.DS_Store
+
+# werkdocumenten voor Claude: niet in git (de repo is publiek)
+CLAUDE.md
+_werkdocumenten/

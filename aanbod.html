@@ -1,415 +1,311 @@
 <!DOCTYPE html>
-<html lang="nl-NL">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aanbod – 4Feet2Move | Proefles, training op locatie en tarieven</title>
+    <meta name="description" content="Proefles (€25), les of training op locatie (€35) en reiskosten (€0,40 per km). Lees over de visie, de werkwijze en het Skala der Ausbildung van 4Feet2Move." />
+    <meta name="theme-color" content="#7f1710" />
+    <link rel="canonical" href="https://4feet2move.com/aanbod.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="4Feet2Move" />
+    <meta property="og:title" content="Aanbod – 4Feet2Move | Proefles, training op locatie en tarieven" />
+    <meta property="og:description" content="Proefles (€25), les of training op locatie (€35) en reiskosten (€0,40 per km). Lees over de visie, de werkwijze en het Skala der Ausbildung van 4Feet2Move." />
+    <meta property="og:url" content="https://4feet2move.com/aanbod.html" />
+    <meta property="og:image" content="https://4feet2move.com/images/hero-aanbod.webp" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="styles-website/home.css" />
-    <link rel="stylesheet" href="styles-website/header.css" />
-    <link rel="stylesheet" href="styles-website/general.css" />
-    <link rel="stylesheet" href="styles-website/footer.css" />
-    <link rel="stylesheet" href="styles-website/aanbod.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Aanbod</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Figtree:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <header class="header-flex">
-      <img
-        src="website-images/4F2M_logo 6hoek Wit op transparant.png"
-        alt="4Feet2Move Logo"
-        class="logo"
-      />
-      <input type="checkbox" id="check" />
-      <label for="check" class="icons">
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <i class="bx bx-x" id="close-icon"></i>
-      </label>
-      <nav class="navbar">
-        <a href="index" style="--i: 0">Home</a>
-        <a href="over-mij" style="--i: 1">Over Mij</a>
-        <a href="aanbod" style="--i: 2">Aanbod</a>
-        <a href="contact" style="--i: 3">Contact</a>
+    <a class="skip-link" href="#main">Naar de inhoud</a>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="4Feet2Move - naar de homepage">
+        <img class="logo--light" src="images/logo-wit.webp" alt="" width="400" height="454" />
+        <img class="logo--solid" src="images/logo-bordeaux.webp" alt="" width="400" height="454" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu openen"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Hoofdmenu">
+        <a href="index.html">Home</a>
+        <a href="aanbod.html" aria-current="page">Aanbod</a>
+        <a href="over-mij.html">Over mij</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Proefles aanvragen</a>
       </nav>
     </header>
 
-    <div class="opening-section aanbod">
-      <div class="text-container-header">
-        <h1>Aanbod</h1>
-      </div>
-    </div>
+    <main id="main">
+      <section class="hero hero--page">
+        <div class="hero__media" data-parallax="0.12"><img src="images/hero-aanbod.webp" alt="" /></div>
+        <div class="hero__inner">
+          <p class="eyebrow">Persoonlijk &amp; op maat</p>
+          <h1>Aanbod</h1>
+        </div>
+      </section>
 
-    <div class="background">
-      <div class="cont-svg mobile-only">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-      <div class="cont-svg desktop-only">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-
-      <div class="container">
-        <div class="over-mij-text">
-          <div class="flex-items-title">
-            <h1>Hoe gaan we te werk?</h1>
-            <hr class="block-separator" />
+      <section class="section" id="proefles">
+        <span class="blob blob--blush" style="width:30rem;height:30rem;right:-10rem;top:-4rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <div class="pills reveal" aria-label="Op deze pagina">
+            <a class="pill" href="#proefles">Proefles</a><a class="pill" href="#locatie">Training op locatie</a><a class="pill" href="#visie">Visie</a><a class="pill" href="#werkwijze">Werkwijze</a><a class="pill" href="#het-aanbod">Het aanbod</a>
           </div>
-          <a
-            href="https://www.flaticon.com/free-icons/automation"
-            title="Automation icons created by Becris - Flaticon"
-            ><img
-              src="website-images/procedure.png"
-              alt="tandwielen"
-              class="automation-img"
-          /></a>
-          <p>
-            Omdat veiligheid, gezondheid en paardenwelzijn voorop staat bij
-            4Feet2Move wordt er uitgebreid de tijd genomen om kennis te maken
-            met elke combinatie alvorens de training start. Bij de eerste
-            kennismaking krijg jij alle ruimte om jezelf en je paard voor te
-            stellen. Daarbij stelt Tyra mogelijk een aantal aanvullende vragen
-            om jouw hulpvraag helder te maken en rekening te kunnen houden met
-            bijvoorbeeld fysieke belemmeringen of angsten.
-          </p>
-
-
-          <br />
-          <a
-            href="https://www.flaticon.com/free-icons/observation"
-            title="Observation icons created by Eucalyp - Flaticon"
-            ><img
-              src="website-images/observation.png"
-              alt="man met vergrootglas"
-              class="obs-img"
-          /></a>
-
-          <p>
-            Tyra observeert paard en de ruiter tijdens de warming up, op deze
-            manier kan zij gericht advies geven aan jou als ruiter. Er wordt
-            altijd gestart vanuit een solide basis; een heldere afstemming
-            tussen paard en ruiter met aandacht voor correcte biomechanica,
-            paardengedrag en lichaamsgebruik.
-            <br /><br />
-            4Feet2Move geeft ruiters handvatten mee om zelfstandig stappen te
-            zetten richting het gewenste doel. Tijdens de training bepaal jij
-            waar de focus op ligt en waar naartoe gewerkt gaat worden. Dat
-            kunnen bijvoorbeeld het dressuurmatig opleiden van het (jonge) paard
-            zijn, verkeersmak maken, angsten/trauma overwinnen, gedragsproblemen
-            oplossen of andere uitdagingen waar extra aandacht voor nodig is.
-          </p>
-
-          <div class="all-fases-container">
-            <div style="text-align: center;">
-              <a
-              href="https://www.flaticon.com/free-icons/phases"
-              title="Phases icons created by Freepik - Flaticon"
-              ><img
-                src="website-images/phases.png"
-                alt="afbeelding met punten en een vlaggetje"
-                class="phase-img"
-            /></a>
+          <div class="split" style="margin-top:4rem">
+            <div class="split__media"><div class="arch mask"><img src="images/aanbod-proefles.webp" alt="Tyra en een paard tijdens een proefles in de bak" width="768" height="1024" loading="lazy" /></div></div>
+            <div>
+              <p class="eyebrow reveal">Kennismaken</p>
+              <h2 class="reveal" style="--d:80">Proefles</h2>
+              <div class="pricebadge reveal" style="--d:120"><b>&euro;25</b><span>excl. reiskosten</span></div>
+              <p class="lead reveal" style="--d:160">Vrijblijvend kennismaken en samen jullie doelen bespreken. De kosten zijn &euro;25 excl. reiskosten.</p>
             </div>
-
-            <h2>Fases</h2>
-
-            <p style="padding: 0; margin-bottom: 1em; text-align: center;">
-              Samenvattend werkt 4Feet2Move in de training in 3 verschillende
-              fasen:
-            </p>
-
-            <ol class="rounded-list">
-              <div class="fase-container">
-                <li class="nr1">Gewenningsfase</li>
-                <div class="container-all-text">
-                  <div class="aanbod-text">
-                    Dit is de fase waarin een paard moet leren wennen aan het
-                    ruitergewicht op zijn rug. Hierbij wordt er ook aandacht
-                    besteed aan het vinden van balans. In de eerste fase zijn
-                    <span class="tooltip takt">takt*</span>
-                    en
-                    <span class="tooltip losgelatenheid">losgelatenheid*</span>
-                    de voornaamste onderdelen waaraan gewerkt wordt.
-
-                    <div class="div-verbergen div-takt">
-                      Het eigen zuivere ritme van de beweging. In elke gang moet
-                      het paard in een taktmatige beweging lopen. Dat betekent
-                      in de stap een 4-takt, draf een 2-takt en galop een
-                      3-takt.
-                    </div>
-                    <div class="div-verbergen div-losgelatenheid">
-                      Losheid, souplesse en ontspanning. Het paard kan alleen in
-                      zuivere takt bewegen als de rug veert en de spieren van de
-                      hals en rug zich zonder dwang aan- en ontspannen. Bij een
-                      ontspannen gaand paard buigen en strekken de gewrichten
-                      zich gelijkmatig.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="fase-container">
-                <li class="nr2">
-                  De ontwikkeling van verticaal en horizontaal evenwicht
-                </li>
-                <div class="container-all-text">
-                  <div class="aanbod-text">
-                    In de tweede fase heeft het paard al een start gemaakt in
-                    het ontwikkelen van verticale en horizontale balans wat
-                    verder in het proces over zal gaan in draagkracht. In deze
-                    fase wordt aandacht besteed aan horizontaal evenwicht
-                    bevestigen en het stimuleren van het achterbeen gebruik. In
-                    deze fase ligt de focus meer op
-                    <div class="tooltip aanleuning">aanleuning*</div>
-                    , takt en
-                    <div class="tooltip schwung">schwung*</div>
-                    .
-                    <div class="div-verbergen div-aanleuning">
-                      Een verende verbinding tussen de ruiterhand en de mond van
-                      het paard, welke opgezocht wordt door het paard.
-                    </div>
-                    <div class="div-verbergen div-schwung">
-                      Het activeren van het achterbeen resulteert in impuls wat
-                      ervoor zorgt dat het paard zijn benen energiek optilt. In
-                      het zweefmoment swingt het paard goed met zijn benen in
-                      voorwaartse richting.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="fase-container" style="margin-bottom: 1em">
-                <li class="nr3">Het ontwikkelen van draagkracht</li>
-                <div class="container-all-text">
-                  <div class="aanbod-text">
-                    De derde en laatste fase richt zich op het ontwikkelen van
-                    draagkracht: evenwicht verplaatsen naar de achterhand en
-                    daarbij ook het opnemen van gewicht in de achterhand. In
-                    deze fase wordt er voornamelijk gericht op
-                    <div class="tooltip rechtrichten">rechtrichten*</div>
-                    en
-                    <div class="tooltip verzamelen">verzamelen*</div>
-                    .
-                    <div class="div-verbergen div-rechtrichten">
-                      Het plaatsen van de voorhand vóór de achterhand. Door de
-                      natuurlijke scheefheid van het paard te corrigeren wordt
-                      verzameling mogelijk gemaakt. Door recht te richten creëer
-                      je balans op zowel rechte als gebogen lijnen.
-                    </div>
-                    <div class="div-verbergen div-verzamelen">
-                      Het bundelen van energie en het dragen van meer gewicht op
-                      de achterhand. Bij verzameling worden beide achterbenen
-                      richting het zwaartepunt van het paard opgetild en
-                      neergezet. Door de toenemende kracht van het paard kan het
-                      paard zich meer buigen in de gewrichten en achterhand
-                      waardoor de croupe van de achterhand daalt en de
-                      oprichting in de voorhand toeneemt.
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="wrap--narrow" style="margin-top:5rem">
+            <h3 class="reveal" style="font-size:clamp(1.8rem,3.4vw,2.6rem)">Wat kun je verwachten van een proefles?</h3>
+            <ol class="steps">
+              <li class="reveal"><p>Geen paard en geen combinatie zijn hetzelfde. Daarom begint iedere begeleiding met goed kijken, luisteren en afstemmen.</p></li>
+              <li class="reveal"><p>Op basis van de informatie die ik van jou en je paard ontvang, jullie wensen en doelen en de ervaring en kennis die al aanwezig zijn, maken we een passend plan van aanpak.</p></li>
+              <li class="reveal"><p>Tijdens de proefles kijken we naar de huidige situatie: wat gaat er al goed, waar liggen de mogelijkheden en wat is er nodig om verder te groeien? Daarbij houden we rekening met wat haalbaar en realistisch is voor zowel jou als je paard.</p></li>
+              <li class="reveal"><p>Vanuit die basis gaan we praktisch aan de slag. We voegen nieuwe inzichten, oefeningen of kleine aanpassingen toe die aansluiten bij jullie behoeften. Zo werken we stap voor stap, op een manier die bij jullie past, toe naar het gewenste doel.</p></li>
             </ol>
           </div>
-
-          <p>
-            Zodra deze drie fasen zijn bereikt komen we tot het hoofddoel van de
-            dressuur namelijk Durchlässigkeit, wat wil zeggen dat paard en
-            ruiter in harmonie samenwerken en geheel in ontspanning alle hulpen
-            doorlaat.
-          </p>
         </div>
-      </div>
+      </section>
 
-      <div class="cont-svg mobile-only flip">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-      <div class="cont-svg desktop-only flip">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-      <div class="img-overlay-container">
-        <img src="website-images/image13.jpeg" alt="tyra op een paard" />
-      </div>
-      <div class="cont-svg mobile-only">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-      <div class="cont-svg desktop-only">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-
-      <div class="container">
-        <div class="over-mij-text">
-          <h1>Aanbod</h1>
-          <hr class="block-separator" />
-          <p>
-            Alle onderstaande prijzen zijn
-            <strong>exclusief reiskosten</strong>; €0,23 per extra gereden km
-            vanaf 1702 GP enkele reis. Reiskosten worden in mindering gebracht
-            bij aansluitende combinaties op dezelfde locatie.
-          </p>
-        </div>
-
-        <div class="aanbod-grid">
-          <div class="aanbod-preview">
-            <div class="img-row">
-              <img class="aanbod-img1" src="website-images/image9.jpeg" />
+      <section class="section section--sand" id="locatie">
+        <span class="blob blob--sage" style="width:26rem;height:26rem;left:-9rem;top:-4rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <div class="two-col" style="align-items:center">
+            <div>
+              <p class="eyebrow reveal">Op locatie</p>
+              <h2 class="reveal" style="--d:80">Les of Training bij jou op locatie</h2>
             </div>
-            <div class="container-all-text">
-              <h2>Proefles <br> €25</h2>
-              <div class="aanbod-text">
-                <p>
-                  Wil jij graag ontdekken wat 4Feet2Move voor jou en je paard
-                  kan betekenen? Kies dan voor een proefles, waarin we
-                  uitgebreid kennismaken en samen de eerste stappen zetten
-                  richting jullie persoonlijke werkdoel. In deze speciale les
-                  ligt de nadruk op het helder formuleren van jullie behoeften
-                  en doelen, waarna we gezamenlijk werken aan het verwezenlijken
-                  ervan. Het maakt niet uit op welk niveau jij en je paard
-                  momenteel zitten of welke wensen en ambities je koestert;
-                  iedereen en alle paarden zijn meer dan welkom!
-                </p>
-              </div>
-            </div>
+            <div class="rounded mask" style="aspect-ratio:4/3"><img src="images/aanbod-training.webp" alt="Tyra en een donker paard tijdens een training" width="900" height="675" loading="lazy" /></div>
           </div>
-
-          <div class="aanbod-preview">
-            <div class="img-row">
-              <img class="aanbod-img2" src="website-images/image12.jpeg" />
-            </div>
-
-            <div class="container-all-text">
-              <h2>Losse training <br>
-                €35</h2>
-              <div class="aanbod-text">
-                <p>
-                  Wil je graag dieper ingaan op de training en samen met
-                  4Feet2Move verder werken aan de ontwikkeling van jou en je
-                  paard? Kies dan voor een losse trainingssessie, waarbij we
-                  gezamenlijk stap voor stap de weg vervolgen naar jullie
-                  einddoel. Of je nu aan het begin staat van jullie reis of al
-                  verder gevorderd bent, er is altijd ruimte voor groei en
-                  verbetering. Samen creëren we een unieke trainingservaring die
-                  perfect aansluit op jullie behoeften en niveau. Iedereen,
-                  ongeacht ervaring of ambities, is van harte welkom om samen
-                  met 4Feet2Move aan de slag te gaan!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="aanbod-preview">
-            <div class="img-row">
-              <img class="aanbod-img3" src="website-images/image4.jpeg" />
-            </div>
-            <div class="container-all-text">
-              <h2>5-Lessen pakket <br> €150</h2>
-              <div class="aanbod-text">
-                <p>
-                  Is jouw enthousiasme aangewakkerd en overweeg je wekelijks een
-                  gestructureerde training in te plannen? Ontdek dan het
-                  5-Lessenpakket, een aantrekkelijke optie voor wie regelmatig
-                  wil trainen en optimaal voordeel wil halen uit de sessies. Met
-                  dit pakket ben je verzekerd van een consistente en
-                  progressieve aanpak, waardoor jij en je paard samen gestaag
-                  vooruitgang boeken. Neem de volgende stap in jullie
-                  trainingsreis en profiteer van de voordelen die het
-                  5-Lessenpakket te bieden heeft!
-                </p>
-              </div>
-            </div>
+          <div class="infogrid">
+            <article class="info reveal">
+              <h3>Wat kun je verwachten van een les of training?</h3>
+              <p>De duur van een les is afhankelijk van de situatie, het doel en wat jij en je paard op dat moment aankunnen. Kwaliteit en welzijn staan hierbij voorop; we kijken dus niet op de klok. Gemiddeld duurt een les tussen de 40 en 60 minuten. Zo is er voldoende ruimte om op jullie eigen tempo te werken en de training af te stemmen op wat jullie nodig hebben.</p>
+            </article>
+            <article class="info info--accent reveal" style="--d:120">
+              <h3>Wat zijn de tarieven?</h3>
+              <p>Voor een training of les op locatie</p>
+              <p class="big">&euro;35</p>
+              <p class="fineprint">Ik werk met één vast tarief, ongeacht de trainingsvorm.</p>
+            </article>
+            <article class="info reveal" style="--d:240">
+              <h3>Reiskosten</h3>
+              <p>Voor trainingen op locatie reken ik &euro;0,40 per gereden kilometer. De reiskosten worden berekend vanaf mijn vertrekadres en gelden voor de heen- en terugreis.</p>
+              <p>Ik val onder de kleineondernemersregeling (KOR). Hierdoor breng ik geen btw in rekening.</p>
+              <p><strong>Zo weet je vooraf waar je aan toe bent, zonder verrassingen achteraf!</strong></p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="call-to-action">
-          <h2>
-            Heb je een vraag of wil je een afspraak maken? Neem dan vrijblijvend
-            contact met ons op.
-          </h2>
-          <button class="contact-button">
-            <a href="contact" class="tab">Contact Opnemen</a>
-          </button>
+      <section class="section section--dark visie" id="visie">
+        <span class="blob blob--bord" style="width:34rem;height:34rem;right:-10rem;top:-12rem" aria-hidden="true"></span>
+        <div class="wrap--narrow" style="width:min(100% - 2*var(--gutter),1000px)">
+          <p class="eyebrow reveal">Visie</p>
+          <h2 class="reveal" style="--d:60">De visie van 4Feet2Move</h2>
+          <p class="big-text reveal" style="--d:120">Bij 4Feet2Move maken we een plan dat aansluit bij jou en je paard. Iedere combinatie is uniek. Daarom verdient ieder paard een training die bij hem past en iedere ruiter persoonlijke aandacht. We kijken <em>écht</em> naar de combinatie. Geen quick fixes of standaardmethodes, maar samen groeien op een manier die bij jullie past. Met geduld en oog voor het welzijn van jouw paard.</p>
+        </div>
+      </section>
+
+      <section class="section" id="werkwijze">
+        <span class="blob blob--blush" style="width:32rem;height:32rem;left:-12rem;top:20rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <div class="two-col">
+            <div><p class="eyebrow reveal">Werkwijze</p><h2 class="reveal" style="--d:80">Werkwijze van 4Feet2Move</h2></div>
+            <div class="prose reveal" style="--d:120">
+              <p>Iedere begeleiding begint met kijken, luisteren en kennismaken. Wat is jullie huidige situatie? Wat zijn de wensen en doelen? Welke ervaring en kennis is er al aanwezig? Op basis daarvan kijken we wat er al goed gaat, waar mogelijkheden liggen en wat nodig is om verder te ontwikkelen. We maken een plan dat aansluit bij jullie als combinatie, waarbij haalbaarheid, belastbaarheid en het welzijn van het paard altijd vooropstaan.</p>
+            </div>
+          </div>
+          <div class="prose" style="margin-top:3rem">
+            <p class="reveal">Bij 4Feet2Move werken we vanuit de principes van het Skala der Ausbildung.</p>
+            <button class="btn btn--outline skala-open reveal" type="button" data-open-dialog="skala-dialog" aria-haspopup="dialog">Uitleg Skala der Ausbildung</button>
+            <p class="reveal" style="margin-top:2rem"><strong>Deze principes hebben we in 3 fases opgedeeld:</strong></p>
+          </div>
+          <div class="phases">
+          <article class="phase reveal" style="--d:0" data-fase-card="1">
+            <span class="phase__num">Fase 1</span>
+            <h3>Vertrouwen, ontspanning &amp; basis</h3>
+            <p>We beginnen bij een ontspannen paard dat begrijpt wat er gevraagd wordt. We werken aan takt, losgelatenheid en een fijne aanleuning. Dit vormt de basis voor verdere ontwikkeling.</p>
+            <button class="btn btn--outline btn--small" type="button">Bekijk in het Skala</button>
+          </article>
+          <article class="phase reveal" style="--d:100" data-fase-card="2">
+            <span class="phase__num">Fase 2</span>
+            <h3>Kracht, souplesse &amp; balans</h3>
+            <p>Vanuit een goede basis werken we aan meer activiteit vanuit de achterhand, souplesse en rechtgerichtheid. Het paard leert zijn lichaam steeds beter en gelijkmatiger te gebruiken.</p>
+            <button class="btn btn--outline btn--small" type="button">Bekijk in het Skala</button>
+          </article>
+          <article class="phase reveal" style="--d:200" data-fase-card="3">
+            <span class="phase__num">Fase 3</span>
+            <h3>Draagkracht &amp; verzameling</h3>
+            <p>In deze fase leert het paard steeds meer gewicht met de achterhand te dragen. Hierdoor ontstaat meer balans, kracht en lichtheid in de beweging.</p>
+            <button class="btn btn--outline btn--small" type="button">Bekijk in het Skala</button>
+          </article>
+          </div>
+
+          <div class="skala reveal" data-skala>
+            <div>
+              <div class="pyramid-wrap">
+                <div class="pyramid-arrow" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#up"/></svg><span>Van basis naar verzameling</span></div>
+                <div class="pyramid skala-tabs" role="tablist" aria-orientation="vertical" aria-label="De zes onderdelen van het Skala der Ausbildung">
+                  <button class="tab" role="tab" id="tab-6" data-n="6" aria-selected="false" aria-controls="skala-panel" tabindex="-1"><b>6</b><span>Verzameling</span></button>
+                  <button class="tab" role="tab" id="tab-5" data-n="5" aria-selected="false" aria-controls="skala-panel" tabindex="-1"><b>5</b><span>Rechtgerichtheid</span></button>
+                  <button class="tab" role="tab" id="tab-4" data-n="4" aria-selected="false" aria-controls="skala-panel" tabindex="-1"><b>4</b><span>Schwung (impuls)</span></button>
+                  <button class="tab" role="tab" id="tab-3" data-n="3" aria-selected="false" aria-controls="skala-panel" tabindex="-1"><b>3</b><span>Aanleuning</span></button>
+                  <button class="tab" role="tab" id="tab-2" data-n="2" aria-selected="false" aria-controls="skala-panel" tabindex="-1"><b>2</b><span>Losgelatenheid</span></button>
+                  <button class="tab" role="tab" id="tab-1" data-n="1" aria-selected="false" aria-controls="skala-panel" tabindex="-1"><b>1</b><span>Takt</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="skala-panel" id="skala-panel" role="tabpanel" aria-live="polite">
+              <p class="lead" style="font-size:1.05rem;margin-bottom:1.5rem">Dit is een opleidingsschaal die bestaat uit zes onderdelen. Samen vormen ze de basis voor een evenwichtige, gezonde en duurzame ontwikkeling van het paard. Kies een trede voor de uitleg.</p>
+                <article class="skala-item" data-n="1" aria-labelledby="tab-1">
+                  <span class="tag">Fase 1</span>
+                  <h3><i>1.</i> Takt</h3>
+                  <p class="sub">Een regelmatig ritme</p>
+                  <p>Een regelmatig en zuiver ritme in alle gangen, bij een passend tempo en een gelijkmatige bewegingsafloop.</p>
+                </article>
+                <article class="skala-item" data-n="2" aria-labelledby="tab-2">
+                  <span class="tag">Fase 1</span>
+                  <h3><i>2.</i> Losgelatenheid</h3>
+                  <p class="sub">Ontspannen en soepel</p>
+                  <p>Het paard beweegt ontspannen en soepel, zonder onnodige spanning. De spieren kunnen vrij bewegen en de energie kan stromen.</p>
+                </article>
+                <article class="skala-item" data-n="3" aria-labelledby="tab-3">
+                  <span class="tag">Fase 1</span>
+                  <h3><i>3.</i> Aanleuning</h3>
+                  <p class="sub">Een zachte verbinding</p>
+                  <p>Een elastische en constante verbinding tussen ruiter en paard, van achter naar voren. De hulpen worden door het hele lichaam doorgegeven.</p>
+                </article>
+                <article class="skala-item" data-n="4" aria-labelledby="tab-4">
+                  <span class="tag">Fase 2</span>
+                  <h3><i>4.</i> Schwung (impuls)</h3>
+                  <p class="sub">Actieve voorwaartse beweging</p>
+                  <p>Een actieve, voorwaartse beweging waarbij de energie vanuit de achterhand via een soepel en losgelaten lichaam naar voren wordt overgebracht.</p>
+                </article>
+                <article class="skala-item" data-n="5" aria-labelledby="tab-5">
+                  <span class="tag">Fase 2</span>
+                  <h3><i>5.</i> Rechtgerichtheid</h3>
+                  <p class="sub">In balans en recht</p>
+                  <p>Het paard leert zijn lichaam gelijkmatig te gebruiken, zodat beide achterbenen goed onder het lichaam kunnen treden. Dit geeft meer balans en symmetrie.</p>
+                </article>
+                <article class="skala-item" data-n="6" aria-labelledby="tab-6">
+                  <span class="tag">Fase 3</span>
+                  <h3><i>6.</i> Verzameling</h3>
+                  <p class="sub">Meer gewicht op de achterhand</p>
+                  <p>Het paard leert meer gewicht op de achterhand te nemen, waarbij de voorhand lichter wordt. Dit zorgt voor meer balans, kracht en wendbaarheid.</p>
+                </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--sand" id="het-aanbod">
+        <span class="blob blob--rose" style="width:28rem;height:28rem;right:-9rem;top:-6rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <div class="two-col">
+            <div>
+              <p class="eyebrow reveal">Aanbod</p>
+              <h2 class="reveal" style="--d:80">Het Aanbod</h2>
+              <p class="reveal" style="--d:120">De ontwikkeling van een paard vindt niet alleen plaats onder het zadel. Daarom biedt 4Feet2Move verschillende mogelijkheden om zowel vanaf de grond als onder het zadel te trainen.</p>
+              <p class="reveal" style="--d:160"><strong>Je kunt terecht voor:</strong></p>
+              <ul class="aanbod-list">
+                <li class="reveal">Dressuurmatig rijden</li>
+                <li class="reveal" style="--d:60">Academische dressuur aan de hand</li>
+                <li class="reveal" style="--d:120">Advanced longing</li>
+                <li class="reveal" style="--d:180">Loswerken</li>
+                <li class="reveal" style="--d:240">Training &amp; begeleiding gericht op gedrag</li>
+              </ul>
+            </div>
+            <div class="prose">
+              <p class="reveal">Ook voor het beleren van paarden onder het zadel kun je bij 4Feet2Move terecht. Omdat ieder paard en iedere situatie anders is, bekijken we samen of dit binnen de mogelijkheden past. Hierbij kijken we onder andere naar het paard, de wensen van de eigenaar, de beschikbare trainingsfaciliteiten en de veiligheid van de omgeving. Interesse in het beleren van jouw paard? Neem dan persoonlijk contact op om de mogelijkheden te bespreken.</p>
+              <p class="reveal">Vanuit deze verschillende trainingsvormen werken we aan een solide basis, body-awareness, balans en een fijne samenwerking tussen paard en eigenaar. Wat we vanaf de grond ontwikkelen, kan waar mogelijk worden meegenomen naar het werk onder het zadel.</p>
+              <p class="reveal">De training wordt afgestemd op de behoeften, mogelijkheden en ontwikkeling van jouw paard. Zo werken we stap voor stap verder aan een sterke basis en een duurzame ontwikkeling.</p>
+            </div>
+          </div>
+          <div class="wide-photo mask"><img src="images/tyra-paard-banner.webp" alt="Tyra op een donker paard in een zandbak tussen de bomen" width="1024" height="647" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <section class="section section--blush cta">
+        <span class="blob blob--rose" style="width:30rem;height:30rem;left:-10rem;top:-8rem" aria-hidden="true"></span>
+        <span class="blob blob--sage" style="width:24rem;height:24rem;right:-8rem;bottom:-8rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <h2 class="reveal">Benieuwd wat 4Feet2Move voor jullie kan betekenen?</h2>
+          <div class="btn-row reveal" style="--d:100">
+            <a class="btn" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Vraag hier een proefles aan</a>
+            <a class="btn btn--outline" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#whatsapp"/></svg> Stuur een WhatsApp</a>
+          </div>
+          <p class="fineprint reveal" style="--d:200">Bij het inplannen van afspraak ga je automatisch akkoord met <a href="algemene-voorwaarden.html">algemene voorwaarden</a>.</p>
+        </div>
+      </section>
+
+      <dialog class="modal" id="skala-dialog" aria-labelledby="skala-dialog-h">
+        <div class="modal__head">
+          <h2 id="skala-dialog-h">Skala der Ausbildung</h2>
+          <button class="round-btn modal__close" type="button" data-close-dialog aria-label="Sluit de uitleg"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#close"/></svg></button>
+        </div>
+        <div class="modal__body">
+          <p>Dit is een opleidingsschaal die bestaat uit zes onderdelen. Samen vormen ze de basis voor een evenwichtige, gezonde en duurzame ontwikkeling van het paard. Je kunt het Skala zien als een piramide: een goede basis is nodig om verder te kunnen bouwen. De onderdelen hangen met elkaar samen en blijven gedurende de hele opleiding belangrijk.</p>
+          <p>De onderdelen bouwen op elkaar voort, maar beïnvloeden elkaar ook voortdurend. We kijken daarom niet alleen naar welke fase een paard heeft bereikt, maar vooral naar wat het op dat moment nodig heeft.</p>
+          <img src="images/skala.webp" alt="Piramide van het Skala der Ausbildung met de zes onderdelen: 1 Takt, 2 Losgelatenheid, 3 Aanleuning, 4 Schwung, 5 Rechtgerichtheid, 6 Verzameling. Pijl: van basis naar verzameling." width="1200" height="800" loading="lazy" />
+          <ol class="modal__list" aria-label="De zes onderdelen">
+            <li><b>Takt</b> <span>Een regelmatig ritme. Een regelmatig en zuiver ritme in alle gangen, bij een passend tempo en een gelijkmatige bewegingsafloop.</span></li>
+            <li><b>Losgelatenheid</b> <span>Ontspannen en soepel. Het paard beweegt ontspannen en soepel, zonder onnodige spanning. De spieren kunnen vrij bewegen en de energie kan stromen.</span></li>
+            <li><b>Aanleuning</b> <span>Een zachte verbinding. Een elastische en constante verbinding tussen ruiter en paard, van achter naar voren. De hulpen worden door het hele lichaam doorgegeven.</span></li>
+            <li><b>Schwung (impuls)</b> <span>Actieve voorwaartse beweging. Een actieve, voorwaartse beweging waarbij de energie vanuit de achterhand via een soepel en losgelaten lichaam naar voren wordt overgebracht.</span></li>
+            <li><b>Rechtgerichtheid</b> <span>In balans en recht. Het paard leert zijn lichaam gelijkmatig te gebruiken, zodat beide achterbenen goed onder het lichaam kunnen treden. Dit geeft meer balans en symmetrie.</span></li>
+            <li><b>Verzameling</b> <span>Meer gewicht op de achterhand. Het paard leert meer gewicht op de achterhand te nemen, waarbij de voorhand lichter wordt. Dit zorgt voor meer balans, kracht en wendbaarheid.</span></li>
+          </ol>
+        </div>
+      </dialog>
+    </main>
+    <a class="btn sticky-cta" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Vraag een proefles aan</a>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo-wit.webp" alt="4Feet2Move" width="400" height="454" loading="lazy" />
+            <p>Training en instructie op maat.</p>
+          </div>
+          <div>
+            <h2>Menu</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li><li><a href="aanbod.html">Aanbod</a></li><li><a href="over-mij.html">Over mij</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="mailto:4feet2move@gmail.com">4feet2move@gmail.com</a></li>
+              <li><a href="tel:+31653237984">+31 6 53 23 79 84</a></li>
+              <li>Jac. van Maerlantlaan 56<br />1702 GP Heerhugowaard</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Volg ons</h2>
+            <ul><li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li></ul>
+            <div class="socials">
+              <a href="https://www.instagram.com/4feet2move/" target="_blank" rel="noopener" aria-label="4Feet2Move op Instagram"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#instagram"/></svg></a>
+              <a href="https://www.facebook.com/people/4Feet2Move/100089917523354/" target="_blank" rel="noopener" aria-label="4Feet2Move op Facebook"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#facebook"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year>2026</span> 4Feet2Move. Alle rechten voorbehouden.</p>
+          <p>KvK 90002903 &middot; BTW NL004782448B45 &middot; Verzekerd bij Quintes Finagri</p>
         </div>
       </div>
-      <div class="cont-svg mobile-only flip">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-      <div class="cont-svg desktop-only flip">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-          draggable="false"
-        />
-      </div>
-    </div>
-
-    <script src="script.js"></script>
+    </footer>
   </body>
-
-  <footer>
-    <div class="rij">
-      <img
-        src="website-images/4F2M_logo 6hoek Bordeaux rood.png"
-        alt="Logo-footer"
-      />
-    </div>
-    <div class="rij tabbladen">
-      <a href="/">Home</a>
-      <a href="over-mij">Over Mij</a>
-      <a href="aanbod">Aanbod</a>
-      <a href="contact">Contact</a>
-    </div>
-    <div class="rij">
-      <a
-        href="https://www.instagram.com/4feet2move/?igshid=NzZlODBkYWE4Ng%3D%3D"
-        target="_blank"
-      >
-        <div class="sociaal-icoon instagram"></div>
-      </a>
-      <a
-        href="https://www.facebook.com/people/4Feet2Move/100089917523354/"
-        target="_blank"
-      >
-        <div class="sociaal-icoon facebook"></div>
-      </a>
-    </div>
-    <div class="rij">Copyright © 2025 All rights reserved</div>
-  </footer>
 </html>

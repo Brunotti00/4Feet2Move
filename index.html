@@ -1,519 +1,234 @@
 <!DOCTYPE html>
-<html lang="nl-NL">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="4Feet2Move biedt op maat gemaakte instructie op locatie. Dit omvat
-    zowel het trainen van jouw paard vanaf de grond als het trainen
-    onder het zadel. Waar 4Feet2Move graag naartoe werkt, is een
-    ontspannen, zelfverzekerde band tussen ruiter en paard, waarbij de
-    ruiter bewust wordt gemaakt van zijn/haar hulpgeving."
-    />
+    <title>4Feet2Move – Persoonlijke begeleiding voor jou en je paard</title>
+    <meta name="description" content="Persoonlijke begeleiding voor jou en je paard. Op jullie eigen tempo, met aandacht voor vertrouwen, communicatie en welzijn. Paardentraining op locatie in Noord-Holland." />
+    <meta name="theme-color" content="#7f1710" />
     <link rel="canonical" href="https://4feet2move.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="4Feet2Move" />
+    <meta property="og:title" content="4Feet2Move – Persoonlijke begeleiding voor jou en je paard" />
+    <meta property="og:description" content="Persoonlijke begeleiding voor jou en je paard. Op jullie eigen tempo, met aandacht voor vertrouwen, communicatie en welzijn. Paardentraining op locatie in Noord-Holland." />
+    <meta property="og:url" content="https://4feet2move.com/" />
+    <meta property="og:image" content="https://4feet2move.com/images/hero-home.webp" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="styles-website/header.css" />
-    <link rel="stylesheet" href="styles-website/general.css" />
-    <link rel="stylesheet" href="styles-website/over-mij.css" />
-    <link rel="stylesheet" href="styles-website/home.css" />
-    <link rel="stylesheet" href="styles-website/footer.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>4Feet2Move - Jouw Begeleider in Paardentraining</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/website-images/4F2M_logo 6hoek Bordeaux rood.png"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Figtree:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "4Feet2Move",
+  "description": "Persoonlijke paardentraining en begeleiding op locatie, vanaf de grond en onder het zadel.",
+  "url": "https://4feet2move.com/",
+  "image": "https://4feet2move.com/images/hero-home.webp",
+  "email": "4feet2move@gmail.com",
+  "telephone": "+31653237984",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jac. van Maerlantlaan 56",
+    "postalCode": "1702 GP",
+    "addressLocality": "Heerhugowaard",
+    "addressCountry": "NL"
+  },
+  "areaServed": "Noord-Holland"
+}
+    </script>
   </head>
-
   <body>
-    <header class="header-flex">
-      <img
-        src="website-images/4F2M_logo 6hoek Wit op transparant.png"
-        alt="4Feet2Move Logo"
-        class="logo"
-      />
-      <input type="checkbox" id="check" />
-      <label for="check" class="icons">
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <i class="bx bx-x" id="close-icon"></i>
-      </label>
-      <nav class="navbar">
-        <a href="index.html" style="--i: 0">Home</a>
-        <a href="over-mij.html" style="--i: 1">Over Mij</a>
-        <a href="aanbod.html" style="--i: 2">Aanbod</a>
-        <a href="contact.html" style="--i: 3">Contact</a>
+    <a class="skip-link" href="#main">Naar de inhoud</a>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="4Feet2Move - naar de homepage">
+        <img class="logo--light" src="images/logo-wit.webp" alt="" width="400" height="454" />
+        <img class="logo--solid" src="images/logo-bordeaux.webp" alt="" width="400" height="454" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu openen"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Hoofdmenu">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-mij.html">Over mij</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Proefles aanvragen</a>
       </nav>
     </header>
 
-    <div class="opening-section home">
-      <div class="text-container-header">
-        <h1>De weg naar harmonie tussen ruiter en paard</h1>
-        <h2>
-          <span>4Feet2Move</span> <span>&#8212;</span> Jouw Begeleider in
-          Paardentraining
-        </h2>
-        <button class="hero-button">
-          <span class="span-button"></span>
-          <a href="aanbod"> Bekijk Aanbod </a>
-        </button>
-      </div>
-    </div>
-
-    <div class="background">
-      <div class="cont-svg mobile-only">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-        />
-      </div>
-
-      <div class="cont-svg desktop-only">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-        />
-      </div>
-
-      <div class="container">
-        <img
-          src="website-images/image14.jpeg"
-          alt="welkom afbeelding; Tyra met een paard"
-          class="img-home welcome"
-        />
-        <div class="home-text">
-          <h1>Welkom bij 4Feet2Move!</h1>
-          <hr class="block-separator" />
-          <p>
-            4Feet2Move biedt op maat gemaakte instructie op locatie. Dit omvat
-            zowel het trainen van jouw paard vanaf de grond als het trainen
-            onder het zadel. Waar 4Feet2Move graag naartoe werkt, is een
-            ontspannen, zelfverzekerde band tussen ruiter en paard, waarbij de
-            ruiter bewust wordt gemaakt van zijn/haar hulpgeving. Op deze manier
-            werken wij samen naar heldere communicatie en lichtheid toe.
-            4Feet2Move opereert voornamelijk in Noord-Holland, maar in overleg
-            kunnen er ook buiten deze regio afspraken gemaakt worden voor
-            trainingen op locatie.
-          </p>
-        </div>
-      </div>
-      <div class="container" style="padding-top: 0">
-        <img
-          src="website-images/image3.jpeg"
-          alt="afbeelding initiatiefnemer Tyra die een paard kust"
-          class="img-home tablet-only"
-        />
-        <div class="home-text">
-          <h1>Initiatiefnemer</h1>
-          <hr class="block-separator" />
-          <p>
-            Haar hele leven is Tyra al niet weg te slepen bij haar goudeerlijke
-            viervoeters! Door de jaren heen heeft ze dan ook enorm veel mogen
-            leren van professionals over huisvesting, voeding en voornamelijk
-            training. Naast haar opleiding aan de Hippische Professionals heeft
-            ze gewerkt op diverse trainingsstallen en is ze met verschillende
-            type paarden en mensen in aanraking gekomen. Hierdoor heeft ze
-            inzichten gekregen en heeft ze leren inspelen op paard en ruiter.
-            Tyra werkt vanuit rust, zachtheid, observeert nauwkeurig en
-            communiceert duidelijk. Daarnaast biedt ze graag een luisterend oor
-            en is ze positief ingesteld.
-          </p>
-          <button class="contact-button">
-            <a href="contact" class="tab"> Contact opnemen </a>
-          </button>
-        </div>
-        <img
-          src="website-images/image3.jpeg"
-          alt="Tyra-afbeelding"
-          class="img-home desktop-img"
-        />
-      </div>
-      <div class="cont-svg mobile-only flip">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-        />
-      </div>
-
-      <div class="cont-svg desktop-only flip">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-        />
-      </div>
-    </div>
-
-    <div class="tyra-quote-section">
-      <div class="text-container-normal">
-        <h1>
-          <q
-            >Elke kleine stap die je zet is belangrijk om het grote geheel te
-            vormen</q
-          >
-        </h1>
-        <h3>- Tyra van Beek</h3>
-      </div>
-    </div>
-
-    <div class="background">
-      <div class="cont-svg mobile-only">
-        <img
-          src="website-images/top-container-divider-rood.svg"
-          alt="section border"
-        />
-      </div>
-
-      <div class="cont-svg desktop-only">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-        />
-      </div>
-
-      <div
-        class="container"
-        style="padding-top: 1vh; padding-bottom: 1vh; flex-wrap: nowrap"
-      >
-        <div class="waarde-container">
-          <div
-            class="waarde-icon"
-            id="mobile-waarde"
-            style="padding: 0; margin: 0; width: 30vmax"
-          >
-            <a
-              href="https://www.flaticon.com/free-icons/collaboration"
-              title="Value icons created by Uniconlabs - Flaticon"
-            >
-              <img
-                src="website-images/samenwerking-icon2.png"
-                alt="waarden-afbeelding"
-                class="waarde-image"
-            /></a>
-          </div>
-          <div class="over-mij-text">
-            <h1>Samenwerkingen</h1>
-            <hr class="block-separator" />
-            <p>
-              Om de best mogelijke begeleiding te bieden, werkt 4Feet2Move samen
-              met vooraanstaande specialisten. Deze partners versterken ons
-              aanbod en zorgen voor uitgebreide en diepgaande ondersteuning.
-              Onze partners zijn gediplomeerd en hebben een bewezen staat van
-              dienst in hun vakgebied, waardoor ze je dankzij hun expertise nog
-              beter kunnen helpen met jouw specifieke behoeften. Door regelmatig
-              overleg met deze specialisten zorgen we ervoor dat de begeleiding
-              optimaal op elkaar is afgestemd, zodat jij de meest complete en
-              effectieve ondersteuning krijgt.
-            </p>
-          </div>
-          <div class="waarde-icon-kernwaarden" id="desktop-waarde">
-            <a
-              href="https://www.flaticon.com/free-icons/collaboration"
-              title="Value icons created by Uniconlabs - Flaticon"
-            >
-              <img
-                src="website-images/samenwerking-icon2.png"
-                alt="waarden-afbeelding"
-                class="waarde-image"
-            /></a>
+    <main id="main">
+      <section class="hero hero--home">
+        <div class="hero__media" data-parallax="0.18"><img src="images/hero-home.webp" alt="Tyra in het zadel op een zwart paard, in het groen" width="1920" height="1277" fetchpriority="high" /></div>
+        <div class="hero__inner">
+          <p class="eyebrow">Training en instructie op maat</p>
+          <h1>Persoonlijke begeleiding voor jou en je paard.<span class="sub">Op jullie eigen tempo, met aandacht voor vertrouwen, communicatie en welzijn.</span></h1>
+          <div class="btn-row">
+            <a class="btn btn--light" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Vraag hier een proefles aan</a>
+            <a class="btn btn--ghost" href="aanbod.html">Ontdek wat 4Feet2Move voor jullie kan betekenen</a>
           </div>
         </div>
-      </div>
+        <a class="scroll-cue" href="#welkom">Scroll</a>
+      </section>
 
-      <div class="container" style="padding-top: 0; padding-bottom: 5vw">
-        <img
-          src="website-images/samenwerking2.jpg"
-          alt="bewustwording icon"
-          class="img-samenwerking-right"
-        />
-        <div class="home-text">
-          <h2>Natuurgeneeskundige - Irma Gort</h2>
-          <p>
-            Irma Gort is natuurgeneeskundige en aangesloten bij de
-            beroepsvereniging BCND. Irma is therapeut en geeft advies op het
-            gebied van gezondheid en voeding voor huisdieren van groot tot
-            klein. Hierbij maakt ze gebruik van natuurlijke middelen en
-            therapieën.
-          </p>
-          <button class="samenwerking-button">
-            <a href="https://dierenvisie.nl/" class="tab"> Website Bezoeken </a>
-          </button>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group"><span>Vertrouwen</span><i class="dot"></i><span>Communicatie</span><i class="dot"></i><span>Welzijn</span><i class="dot"></i><span>Vertrouwen</span><i class="dot"></i><span>Communicatie</span><i class="dot"></i><span>Welzijn</span><i class="dot"></i></div>
+          <div class="marquee__group" aria-hidden="true"><span>Vertrouwen</span><i class="dot"></i><span>Communicatie</span><i class="dot"></i><span>Welzijn</span><i class="dot"></i><span>Vertrouwen</span><i class="dot"></i><span>Communicatie</span><i class="dot"></i><span>Welzijn</span><i class="dot"></i></div>
         </div>
       </div>
 
-      <div class="container" style="padding-top: 0; padding-bottom: 5vw">
-        <img
-          src="website-images/samenwerking1.jpg"
-          alt="communicatie icon"
-          class="img-samenwerking tablet-only"
-        />
-        <div class="home-text">
-          <h2>Osteopaat - Melissa Hendrikse</h2>
-          <p>
-            Melissa Hendrikse is osteopaat voor paarden sinds 2020 in
-            Noord-Holland. Met haar specialistische kennis van zowel het
-            paarden- als het menselijk lichaam biedt zij heldere inzichten in
-            lichaamsbeweging en externe reacties. Tijdens behandelingen geeft
-            zij duidelijke uitleg en voorbeelden, waardoor eigenaren veel leren
-            over het lichaam van hun paard. Haar diensten omvatten osteopathie,
-            dry needling, fascia release en softlaser.
-          </p>
-          <button class="samenwerking-button">
-            <a href="https://mhpaardenosteopathie.nl/" class="tab">
-              Website Bezoeken
+      <section class="section" id="welkom">
+        <span class="blob blob--blush" style="width:34rem;height:34rem;right:-12rem;top:-6rem" aria-hidden="true"></span>
+        <span class="blob blob--sage" style="width:22rem;height:22rem;left:-8rem;bottom:8rem" aria-hidden="true"></span>
+        <div class="wrap stack">
+          <div class="split">
+            <div class="split__media">
+              <div class="arch mask"><img src="images/welkom-tyra.webp" alt="Tyra met een paard in de bak" width="768" height="1024" loading="lazy" /></div>
+              <span class="split__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#pin"/></svg> Noord-Holland</span>
+            </div>
+            <div class="prose">
+              <p class="eyebrow reveal">Welkom</p>
+              <h2 class="reveal" style="--d:80">Welkom bij <em class="accent">4Feet2Move</em>!</h2>
+              <p class="reveal" style="--d:160">4Feet2Move biedt op maat gemaakte instructie op locatie. Dit omvat zowel het trainen van jouw paard vanaf de grond als het trainen onder het zadel. Waar 4Feet2Move graag naartoe werkt, is een ontspannen, zelfverzekerde band tussen ruiter en paard, waarbij de ruiter bewust wordt gemaakt van zijn/haar hulpgeving. Op deze manier werken wij samen naar heldere communicatie en lichtheid toe. 4Feet2Move opereert voornamelijk in Noord-Holland, maar in overleg kunnen er ook buiten deze regio afspraken gemaakt worden voor trainingen op locatie.</p>
+            </div>
+          </div>
+          <div class="split split--flip">
+            <div class="split__media">
+              <div class="blobimg reveal reveal--scale"><img src="images/tyra-kus.webp" alt="Tyra geeft een grijs paard een kus" width="800" height="1067" loading="lazy" /></div>
+            </div>
+            <div class="prose">
+              <p class="eyebrow reveal">Initiatiefnemer</p>
+              <h2 class="reveal" style="--d:80">Tyra van Beek</h2>
+              <p class="reveal" style="--d:160">Haar hele leven is Tyra al niet weg te slepen bij haar goudeerlijke viervoeters! Door de jaren heen heeft ze dan ook enorm veel mogen leren van professionals over huisvesting, voeding en voornamelijk training. Naast haar opleiding aan de Hippische Professionals heeft ze gewerkt op diverse trainingsstallen en is ze met verschillende type paarden en mensen in aanraking gekomen. Hierdoor heeft ze inzichten gekregen en heeft ze leren inspelen op paard en ruiter. Tyra werkt vanuit rust, zachtheid, observeert nauwkeurig en communiceert duidelijk. Daarnaast biedt ze graag een luisterend oor en is ze positief ingesteld.</p>
+              <div class="btn-row reveal" style="--d:240"><a class="btn btn--outline" href="over-mij.html">Lees het hele verhaal</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <span class="blob blob--bord" style="width:36rem;height:36rem;left:-12rem;top:-10rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <p class="eyebrow reveal">Aanbod</p>
+          <h2 class="reveal" style="--d:80;max-width:20ch">Wat 4Feet2Move voor jullie kan betekenen</h2>
+          <div class="cards3">
+            <a class="tcard reveal" style="--d:0" href="aanbod.html#proefles">
+              <div class="tcard__price">&euro;25<small>excl. reiskosten</small></div>
+              <div><h3>Proefles</h3><p>Vrijblijvend kennismaken en samen jullie doelen bespreken.</p><span class="tcard__go">Meer over de proefles <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></span></div>
             </a>
-          </button>
-        </div>
-        <img
-          src="website-images/samenwerking1.jpg"
-          alt="communicatie icon"
-          class="img-samenwerking desktop-img"
-        />
-      </div>
-
-      <div class="container" style="padding-top: 0; padding-bottom: 5vw">
-        <img
-          src="website-images/samenwerking4.jpg"
-          alt="respect icon"
-          class="img-samenwerking"
-        />
-        <div class="home-text">
-          <h2>Saddlery Heemskerk - Stephanie van Deursen</h2>
-          <p>
-            Met een levenslange passie voor dieren en natuur, en specifieke
-            ervaring met haar eigen paard, heeft Stephanie zich gespecialiseerd
-            in zadeladvies en -verkoop. Na het behalen van haar Master Saddle
-            Fitting Consultant diploma in 2015 en lidmaatschap bij de Vereniging
-            van Zadel & Tuig Deskundigen, biedt ze uitgebreide consulten waarbij
-            ze nauwkeurig de behoeften van paard en ruiter analyseert. Haar
-            aanpak omvat grondig onderzoek van het paard, aangepast advies en
-            indien nodig aanpassingen aan bestaande zadels of advies voor
-            nieuwe.
-          </p>
-          <button class="samenwerking-button">
-            <a href="https://saddleryheemskerk.nl/" class="tab">
-              Website Bezoeken
+            <a class="tcard reveal" style="--d:120" href="aanbod.html#locatie">
+              <div class="tcard__price">&euro;35</div>
+              <div><h3>Les of training op locatie</h3><p>Ik werk met één vast tarief, ongeacht de trainingsvorm.</p><span class="tcard__go">Tarieven en reiskosten <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></span></div>
             </a>
-          </button>
-        </div>
-      </div>
-
-      <div class="cont-svg mobile-only flip">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-        />
-      </div>
-
-      <div class="cont-svg desktop-only flip">
-        <img
-          src="website-images/top-container-divider-rood-tablet.svg"
-          alt="section border"
-        />
-      </div>
-    </div>
-
-    <div class="testimonials-wrapper">
-      <div class="testimonials-header">
-        <h3>Onze Klanten</h3>
-        <h1>Beoordelingen</h1>
-        <div class="stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-      </div>
-
-      <div class="testimonials">
-        <div class="slider">
-          <div class="card">
-            <i class="fa-solid fa-quote-left fa-2xs"></i>
-            <i class="fa-solid fa-quote-right fa-2xs"></i>
-            <div class="persoon-img">
-              <img src="website-images/review2.JPG" alt="persoon-testimonial" />
-            </div>
-            <div class="content">
-              <h3>Begeleiding met Passie</h3>
-              <p>
-                Met heel veel geduld en aanpassingsvermogen heeft Tyra mijn
-                dochter en mij door een heel proces begeleid na het kopen van
-                ons eerste paard. Ze bezit over vele bijzondere eigenschappen
-                waardoor ze uitblinkt in haar werk, met zowel mens als paard.
-                <br /><br />
-                Ze overziet zowel het totaal plaatje als waar in het proces jij
-                en je paard zich bevinden en kan zich naadloos aanpassen aan
-                ieders niveau. Het is heel fijn om met Tyra te werken omdat ze
-                goed kan luisteren en echt oog heeft voor jou als klant en jouw
-                paard. Ze biedt haar kennis en kunde aan op maat waardoor ons
-                zelfvertrouwen als beginners heeft kunnen groeien. We hadden
-                zonder haar niet gestaan waar we nu staan en zijn haar zeer
-                dankbaar!
-              </p>
-              <h4 class="client">- Marit & Imme</h4>
-            </div>
-            <a class="more"></a>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-quote-left fa-2xs"></i>
-            <i class="fa-solid fa-quote-right fa-2xs"></i>
-            <div class="persoon-img">
-              <!-- <img
-                src="website-images/home-page-image.jpeg"
-                alt="persoon-testimonial"
-              /> -->
-            </div>
-            <div class="content">
-              <h3>Leerzame Reis naar Vertrouwen en Subtiliteit</h3>
-              <p>
-                Ik liep flink vast in de training van mijn paard, zelfs tot het
-                punt waarop hij zich losrukte en ervandoor ging. Op dat moment
-                besloot ik Tyra om hulp te vragen. Samen zijn we gestart met het
-                oppakken van de training vanaf de basis en vanaf de grond. Tyra
-                voorzag me van waardevolle inzichten waardoor de communicatie
-                tussen mij en mijn paard niet alleen sterker en beter werd, maar
-                ook subtieler.
-                <br /><br />
-                Het werken vanaf de grond leerde me bovendien om de
-                verschillende gangen en houdingen van het paard te observeren,
-                wat ik later ook onder het zadel kon ervaren. Wat ik waardeer
-                aan Tyra's lessen, zowel vanaf de grond als in het zadel, is
-                haar heldere uitleg en begeleiding.
-                <br /><br />
-                Tyra hanteert geen directe benadering van goed of fout. Ze legt
-                zaken op een duidelijke manier uit en laat me vervolgens zelf
-                het verschil ervaren. In plaats van direct te vertellen wat ik
-                moet doen, stimuleert ze me om dingen uit te proberen en zelf na
-                te denken over de veranderingen die ik voel. Deze aanpak helpt
-                me enorm, zowel tijdens als buiten de lessen, om zelfstandig
-                verder te trainen.
-                <br /><br />
-                Voorheen vond ik het lastig te bepalen wanneer ik bepaalde
-                hulpen moest geven buiten de instructies van Tyra om. Nu ik het
-                zelf ervaar en er bewust van ben tijdens de lessen, lukt het me
-                ook daarbuiten om te weten wanneer ik iets kan toepassen.
-                <br /><br />
-                Tyra legt niet alleen de nadruk op mijn doelen, maar heeft ook
-                veel oog voor het welzijn van het paard. Wat is haalbaar voor
-                hem, welke signalen geeft hij, en vragen we niet te veel in één
-                keer? Ik ben dankbaar dat Tyra op mijn pad is gekomen. Sindsdien
-                hebben mijn paard en ik aanzienlijke vooruitgang geboekt, zowel
-                in onze training als in onze band en wederzijds begrip.
-              </p>
-              <h4 class="client">- Lotus</h4>
-            </div>
-            <a class="more"></a>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-quote-left fa-2xs"></i>
-            <i class="fa-solid fa-quote-right fa-2xs"></i>
-            <div class="persoon-img">
-              <img src="website-images/review4.jpg" alt="persoon-testimonial" />
-            </div>
-            <div class="content">
-              <h3>Vertrouwen Herwonnen</h3>
-              <p>
-                Ik had moeite met het lezen van mijn paard. Hij vindt dingen
-                snel spannend en sluit zichzelf dan af. Het beleren werd
-                hierdoor ook een echte uitdaging. Elke keer als ik dacht dat hij
-                er oké mee was dat ik op hem ging zitten raakte hij toch weer in
-                paniek op een bepaald moment. Tyra heeft mijn paard het
-                vertrouwen gegeven dat hij het kan en mij geleerd om beter naar
-                mijn paard te kijken en luisteren.
-              </p>
-              <h4 class="client">- Wendy</h4>
-            </div>
-            <a class="more"></a>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-quote-left fa-2xs"></i>
-            <i class="fa-solid fa-quote-right fa-2xs"></i>
-            <div class="persoon-img">
-              <!-- <img src="website-images/home-page-image.jpeg" alt="persoon-testimonial" /> -->
-            </div>
-            <div class="content">
-              <h3>Heel blij mee!</h3>
-              <p>
-                Missy en ik hebben zoveel geleerd van Tyra. Missy had al een
-                tijdje niet gewerkt en we moesten elkaar nog leren kennen. Dat
-                was best een uitdaging voor zowel Missy als voor mijzelf. Door
-                de lessen van Tyra en alle tips tussendoor hebben we zoveel
-                vooruitgang geboekt. Heel blij mee!
-              </p>
-              <h4 class="client">- Manu</h4>
-            </div>
-            <a class="more"></a>
+            <a class="tcard reveal" style="--d:240" href="aanbod.html#het-aanbod">
+              <div class="tcard__price" style="font-size:clamp(2.2rem,3.6vw,3rem);line-height:1.1">Grond &amp; zadel</div>
+              <div><h3>Het aanbod</h3><p>Verschillende mogelijkheden om zowel vanaf de grond als onder het zadel te trainen.</p><span class="tcard__go">Bekijk het aanbod <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></span></div>
+            </a>
           </div>
         </div>
-        <i class="fas fa-angle-double-left btn prev"></i>
-        <i class="fas fa-angle-double-right btn next"></i>
-      </div>
+      </section>
 
-      <div class="controls">
-        <div class="dots">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
-          <span></span>
+      <section class="quote">
+        <div class="quote__bg" data-parallax="0.12"><img src="images/quote-achtergrond.webp" alt="" width="1024" height="681" loading="lazy" /></div>
+        <blockquote class="reveal">
+          <q>Elke kleine stap die je zet is belangrijk om het grote geheel te vormen</q>
+          <cite>Tyra van Beek</cite>
+        </blockquote>
+      </section>
+
+      <section class="section section--sand" id="reviews" aria-labelledby="reviews-h">
+        <div class="wrap">
+          <div class="reveal" style="display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap">
+            <div><p class="eyebrow">Reviews</p><h2 id="reviews-h" style="margin:0">Wat klanten zeggen</h2></div>
+            <a class="link-arrow" href="reviews.html">Alle reviews lezen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></a>
+          </div>
+          <div class="carousel" data-carousel role="region" aria-roledescription="carrousel" aria-label="Reviews">
+            <div class="carousel__track" tabindex="0">
+            <article class="rcard">
+              <div class="rcard__mark" aria-hidden="true">&ldquo;</div>
+              <blockquote><p>Met heel veel geduld en aanpassingsvermogen heeft Tyra mijn dochter en mij door een heel proces begeleid na het kopen van ons eerste paard.</p></blockquote>
+              <div class="rcard__who"><span class="avatar"><img src="images/review-marit-imme.webp" alt="" width="80" height="80" loading="lazy" /></span><span class="rcard__name">Marit &amp; Imme</span></div>
+              <a class="link-arrow" href="reviews.html#marit-imme">Lees de hele review <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></a>
+            </article>
+            <article class="rcard">
+              <div class="rcard__mark" aria-hidden="true">&ldquo;</div>
+              <blockquote><p>Tyra heeft mijn paard het vertrouwen gegeven dat hij het kan en mij geleerd om beter naar mijn paard te kijken en luisteren.</p></blockquote>
+              <div class="rcard__who"><span class="avatar"><img src="images/review-wendy.webp" alt="" width="80" height="80" loading="lazy" /></span><span class="rcard__name">Wendy</span></div>
+              <a class="link-arrow" href="reviews.html#wendy">Lees de hele review <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></a>
+            </article>
+            <article class="rcard">
+              <div class="rcard__mark" aria-hidden="true">&ldquo;</div>
+              <blockquote><p>Tyra legt niet alleen de nadruk op mijn doelen, maar heeft ook veel oog voor het welzijn van het paard. &hellip; Ik ben dankbaar dat Tyra op mijn pad is gekomen.</p></blockquote>
+              <div class="rcard__who"><span class="avatar" aria-hidden="true">L</span><span class="rcard__name">Lotus</span></div>
+              <a class="link-arrow" href="reviews.html#lotus">Lees de hele review <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></a>
+            </article>
+            </div>
+            <div class="carousel__ctrl">
+              <div class="dots" role="group" aria-label="Kies een review"></div>
+              <div class="carousel__btns">
+                <button class="round-btn" type="button" data-prev aria-label="Vorige review"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#left"/></svg></button>
+                <button class="round-btn" type="button" data-next aria-label="Volgende review"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#right"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--blush cta">
+        <span class="blob blob--rose" style="width:30rem;height:30rem;left:-10rem;top:-8rem" aria-hidden="true"></span>
+        <span class="blob blob--sage" style="width:24rem;height:24rem;right:-8rem;bottom:-8rem" aria-hidden="true"></span>
+        <div class="wrap">
+          <h2 class="reveal">Benieuwd wat 4Feet2Move voor jullie kan betekenen?</h2>
+          <div class="btn-row reveal" style="--d:100">
+            <a class="btn" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Vraag hier een proefles aan</a>
+            <a class="btn btn--outline" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#whatsapp"/></svg> Stuur een WhatsApp</a>
+          </div>
+          <p class="fineprint reveal" style="--d:200">Bij het inplannen van afspraak ga je automatisch akkoord met <a href="algemene-voorwaarden.html">algemene voorwaarden</a>.</p>
+        </div>
+      </section>
+    </main>
+    <a class="btn sticky-cta" href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">Vraag een proefles aan</a>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo-wit.webp" alt="4Feet2Move" width="400" height="454" loading="lazy" />
+            <p>Training en instructie op maat.</p>
+          </div>
+          <div>
+            <h2>Menu</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li><li><a href="aanbod.html">Aanbod</a></li><li><a href="over-mij.html">Over mij</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="https://wa.me/31653237984?text=Hoi%20Tyra%2C%20ik%20wil%20graag%20een%20afspraak%20maken%20voor%20een%20proefles." target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="mailto:4feet2move@gmail.com">4feet2move@gmail.com</a></li>
+              <li><a href="tel:+31653237984">+31 6 53 23 79 84</a></li>
+              <li>Jac. van Maerlantlaan 56<br />1702 GP Heerhugowaard</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Volg ons</h2>
+            <ul><li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li></ul>
+            <div class="socials">
+              <a href="https://www.instagram.com/4feet2move/" target="_blank" rel="noopener" aria-label="4Feet2Move op Instagram"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#instagram"/></svg></a>
+              <a href="https://www.facebook.com/people/4Feet2Move/100089917523354/" target="_blank" rel="noopener" aria-label="4Feet2Move op Facebook"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#facebook"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year>2026</span> 4Feet2Move. Alle rechten voorbehouden.</p>
+          <p>KvK 90002903 &middot; BTW NL004782448B45 &middot; Verzekerd bij Quintes Finagri</p>
         </div>
       </div>
-    </div>
-
-    <script src="script.js"></script>
+    </footer>
   </body>
-
-  <footer>
-    <div class="rij">
-      <img
-        src="website-images/4F2M_logo 6hoek Bordeaux rood.png"
-        alt="Logo-footer"
-      />
-    </div>
-    <div class="rij tabbladen">
-      <a href="/">Home</a>
-      <a href="over-mij">Over Mij</a>
-      <a href="aanbod">Aanbod</a>
-      <a href="contact">Contact</a>
-    </div>
-    <div class="rij">
-      <a
-        href="https://www.instagram.com/4feet2move/?igshid=NzZlODBkYWE4Ng%3D%3D"
-        target="_blank"
-      >
-        <div class="sociaal-icoon instagram"></div>
-      </a>
-      <a
-        href="https://www.facebook.com/people/4Feet2Move/100089917523354/"
-        target="_blank"
-      >
-        <div class="sociaal-icoon facebook"></div>
-      </a>
-    </div>
-    <div class="rij">Copyright © 2025 All rights reserved</div>
-  </footer>
 </html>
