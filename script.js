@@ -42,9 +42,9 @@
   window.addEventListener("resize", req);
   onScroll();
 
-  /* sticky knop verbergen bij footer/contactformulier */
+  /* sticky knop verbergen bij footer/contactblok */
   if (sticky && "IntersectionObserver" in window) {
-    var hide = $$(".site-footer, #formulier, .whatsapp-card");
+    var hide = $$(".site-footer, .whatsapp-card");
     var inView = 0;
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { inView += e.isIntersecting ? 1 : -1; });
@@ -222,17 +222,6 @@
       if (e.target === dlg && dlg.close) dlg.close();
     });
   });
-
-  /* ---- Contactformulier ---- */
-  var notice = $("[data-sent-notice]");
-  if (notice && new URLSearchParams(location.search).has("verzonden")) notice.hidden = false;
-  var subject = $("#onderwerp");
-  if (subject) {
-    var wanted = new URLSearchParams(location.search).get("onderwerp");
-    if (wanted) {
-      Array.prototype.forEach.call(subject.options, function (o) { if (o.value.toLowerCase() === wanted.toLowerCase()) subject.value = o.value; });
-    }
-  }
 
   /* ---- Zwevende vormen ----
      De vormen blijven golvend (CSS-morph) en dwalen langzaam rond. Raken twee vormen
